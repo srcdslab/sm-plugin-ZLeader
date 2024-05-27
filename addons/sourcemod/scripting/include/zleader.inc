@@ -7,6 +7,26 @@ forward void Leader_SetClientLeader(int client, char[] sReason);
 forward void Leader_RemoveClientLeader(int client);
 
 #define MAXLEADER 5
+#define MAXEDICTS (GetMaxEntities() - 150)
+#define MAXPOSSIBLELEADERS 999 // Determine maxium lines number of leaders.ini 
+
+#define MK_TYPE_CROSSHAIR 1
+#define MK_TYPE_CLIENT 0
+
+#define SP_FOLLOW 0
+
+#define MK_NORMAL 0
+#define MK_DEFEND 1
+#define MK_ZMTP 2
+#define MK_NOHUG 3
+#define MK_PING 4
+
+#define MK_TOTAL 5 // 5 Markers Types
+
+#define MAX_MARKERS 33 // Each Markers Type value * 3
+#define MAX_INDEX (MK_TOTAL * MAX_MARKERS * MK_TOTAL)
+
+#define ENTITIES_PER_MK 3
 
 enum ResignReason
 {
