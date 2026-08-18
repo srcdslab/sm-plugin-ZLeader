@@ -27,11 +27,11 @@ This repository contains the **ZLeader** SourceMod plugin - a comprehensive lead
 - **Language**: SourcePawn
 - **Platform**: SourceMod 1.12+ (minimum supported version)
 - **Compiler**: Latest SourcePawn compiler (spcomp)
-- **Build System**: SourceKnight (sourceknight.yaml)
+- **Build System**: Native GitHub Actions (`.github/workflows/ci.yml`) using `rumblefrog/setup-sp`
 - **Target Games**: Counter-Strike: Source, Counter-Strike: Global Offensive
 
 ### Dependencies
-The plugin has several dependencies managed through SourceKnight:
+The plugin has several dependencies, cloned and compiled against directly in `.github/workflows/ci.yml`:
 - **SourceMod**: Core framework (1.11.0+ from config, 1.12+ recommended)
 - **MultiColors**: Enhanced chat color support
 - **ZombieReloaded**: Integration for zombie-related functionality
@@ -60,8 +60,7 @@ addons/sourcemod/
 materials/                      # Visual assets (textures, sprites)
 models/                        # 3D models for markers
 sound/                         # Audio files (ping sounds)
-sourceknight.yaml              # Build configuration and dependencies
-.github/workflows/ci.yml       # CI/CD pipeline
+.github/workflows/ci.yml       # CI/CD pipeline (build, package, release)
 ```
 
 ## Code Style & Standards
@@ -136,20 +135,22 @@ Each leader slot (Alpha-Echo) has comprehensive configuration:
 
 ### Build & Development Process
 
-#### Using SourceKnight
-SourceKnight is used through GitHub Actions for automated building. For local development:
+#### Using GitHub Actions
+The build is automated via native GitHub Actions (`.github/workflows/ci.yml`):
 ```bash
-# The build process is automated via GitHub Actions using:
-# uses: maxime1907/action-sourceknight@v1
+# Compiler setup uses:
+# uses: rumblefrog/setup-sp@v1.3.1 (SourceMod 1.12.x)
 
-# Local development requires manual SourceMod compiler (spcomp)
-# Dependencies are managed through sourceknight.yaml configuration
+# Dependencies are cloned directly from their git repos and their
+# scripting/include folders are copied into addons/sourcemod/scripting/include
+# before compilation (see the "Install dependencies" step in ci.yml).
 ```
 
 #### Manual Compilation
-For local development without SourceKnight:
+For local development:
 ```bash
-# Ensure SourceMod compiler is in PATH
+# Ensure SourceMod compiler is in PATH, and dependency includes are present
+# under addons/sourcemod/scripting/include
 spcomp -i"addons/sourcemod/scripting/include" addons/sourcemod/scripting/ZLeader.sp
 ```
 
