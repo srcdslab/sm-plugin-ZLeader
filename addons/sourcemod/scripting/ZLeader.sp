@@ -58,7 +58,7 @@ int g_Serial_Beacon = 0,
 	g_iButtonMarkerCount[MAXPLAYERS + 1] = {0, ... },
 	g_iButtonPingCount[MAXPLAYERS + 1] = {0, ... },
 	g_iCooldownBeamPing[MAXPLAYERS + 1] = {0, ... },
-	g_iCurrentLeader[MAXLEADER] = {-1, -1, -1};
+	g_iCurrentLeader[MAXLEADER] = { -1, ... };
 
 bool g_bLate,
 	g_bPlugin_ccc,
@@ -71,8 +71,8 @@ bool g_bLate,
 	g_bTracers,
 	g_bVIPGroups,
 	g_bBlockLeaderChat,
-	g_bShorcut[MAXPLAYERS + 1],
-	g_bPingSound[MAXPLAYERS + 1],
+	g_bShorcut[MAXPLAYERS + 1] = { true, ... },
+	g_bPingSound[MAXPLAYERS + 1] = { true, ... },
 	g_bClientLeader[MAXPLAYERS + 1],
 	g_bTrailActive[MAXPLAYERS + 1] = { false, ... },
 	g_bBeaconActive[MAXPLAYERS + 1] = { false, ... },
@@ -260,7 +260,7 @@ public void OnPluginStart() {
 
 	/* Late load */
 	char sSteam32ID[32];
-	for (int i = 1; i < MaxClients; i++) {
+	for (int i = 1; i <= MaxClients; i++) {
 		if (IsClientInGame(i) && !IsFakeClient(i) && IsClientAuthorized(i) && GetClientAuthId(i, AuthId_Steam2, sSteam32ID, sizeof(sSteam32ID)))
 			OnClientAuthorized(i, sSteam32ID);
 	}
@@ -312,6 +312,11 @@ void LoadConfig() {
 		g_iTotalLeader = 0;
 
 		do {
+			if (g_iTotalLeader >= MAXLEADER) {
+				LogError("configs.txt defines more than %d leaders; ignoring the rest.", MAXLEADER);
+				break;
+			}
+
 			kv.GetString("codename", g_LeaderData[g_iTotalLeader].L_Codename, 48);
 
 			g_LeaderData[g_iTotalLeader].L_Slot = kv.GetNum("leader_slot", -1);
@@ -641,12 +646,14 @@ public void ZLeaderSetting(int client) {
 
 	menu.SetTitle("%T %T", "Menu Prefix", client, "Client Setting", client);
 
-	char shortcut[64], markerpos[64];
+	char shortcut[64], markerpos[64], pingsound[64];
 	FormatEx(shortcut, 64, "%T", "Shortcut", client);
 	FormatEx(markerpos, 64, "%T", "Marker Pos", client);
+	FormatEx(pingsound, 64, "%T", "Ping Sound", client);
 
 	menu.AddItem("shortcut", shortcut);
 	menu.AddItem("markerpos", markerpos);
+	menu.AddItem("pingsound", pingsound);
 
 	menu.ExitBackButton = true;
 	menu.ExitButton = true;
@@ -667,6 +674,9 @@ public int ZLeaderSettingHandler(Menu menu, MenuAction action, int param1, int p
 				FormatEx(thepos, sizeof(thepos), "%T", g_iMarkerPos[param1] == MK_TYPE_CLIENT ? "Client Position" : "Client Crosshair", param1);
 				FormatEx(display, sizeof(display), "%T : %s", "Marker Pos", param1, thepos);
 				return RedrawMenuItem(display);
+			} else if (strcmp(info, "pingsound", false) == 0) {
+				FormatEx(display, sizeof(display), "%T : %T", "Ping Sound", param1, g_bPingSound[param1] ? "Enabled" : "Disabled", param1);
+				return RedrawMenuItem(display);
 			}
 		}
 		case MenuAction_Select: {
@@ -675,12 +685,18 @@ public int ZLeaderSettingHandler(Menu menu, MenuAction action, int param1, int p
 			if (strcmp(info, "shortcut", false) == 0) {
 				char status[32];
 				g_bShorcut[param1] = !g_bShorcut[param1];
-				FormatEx(status, 64, "%T", g_bShorcut[param1] ? "Enabled Chat" : "Disabled Chat", param1);
+				FormatEx(status, sizeof(status), "%T", g_bShorcut[param1] ? "Enabled Chat" : "Disabled Chat", param1);
 				CPrintToChat(param1, "%T %T", "Prefix", param1, "You set shortcut", param1, status);
 				SetClientCookies(param1);
 			} else if (strcmp(info, "markerpos", false) == 0) {
 				g_iMarkerPos[param1] = (g_iMarkerPos[param1] == MK_TYPE_CLIENT) ? MK_TYPE_CROSSHAIR : MK_TYPE_CLIENT;
 				CPrintToChat(param1, "%T %T", "Prefix", param1, (g_iMarkerPos[param1] == MK_TYPE_CLIENT) ? "Marker Pos Player Position" : "Marker Pos Crosshair", param1);
+				SetClientCookies(param1);
+			} else if (strcmp(info, "pingsound", false) == 0) {
+				char status[32];
+				g_bPingSound[param1] = !g_bPingSound[param1];
+				FormatEx(status, sizeof(status), "%T", g_bPingSound[param1] ? "Enabled Chat" : "Disabled Chat", param1);
+				CPrintToChat(param1, "%T %T", "Prefix", param1, "You set pingsound", param1, status);
 				SetClientCookies(param1);
 			}
 
@@ -822,8 +838,10 @@ public Action Command_Leader(int client, int args) {
 	SetGlobalTransTarget(client);
 
 	if (args == 0) {
-		if (client <= 0)
-			ReplyToCommand(client, "%t %t", "Prefix", "Target must be alive");
+		if (client <= 0) {
+			ReplyToCommand(client, "%T %T", "Prefix", client, "This command can only be used in-game.", client);
+			return Plugin_Handled;
+		}
 
 		if (IsPlayerAlive(client) && ZR_IsClientHuman(client) && IsClientLeader(client)) {
 			LeaderMenu(client);
@@ -946,44 +964,30 @@ public void LeaderMenu(int client) {
 	Menu menu = new Menu(LeaderMenuHandler, MENU_ACTIONS_ALL);
 
 	if (g_iMaximumMarker < 1) {
-		int Defend = g_iClientMarker[MK_DEFEND][client] != -1;
-		int Arrow = g_iClientMarker[MK_NORMAL][client] != -1;
-		int NoHug = g_iClientMarker[MK_NOHUG][client] != -1;
-		int ZMTP = g_iClientMarker[MK_ZMTP][client] != -1;
+		char sActive[256];
+		int iActive;
 
-		if (Arrow || Defend || NoHug || ZMTP) {
-			char sds[64];
-			if (Arrow)
-				FormatEx(sds, sizeof(sds), "%t", "Arrow Marker");
-			if (Defend)
-				FormatEx(sds, sizeof(sds), "%t", "Defend Here");
-			if (NoHug)
-				FormatEx(sds, sizeof(sds), "%t", "No Doorhug");
-			if (ZMTP)
-				FormatEx(sds, sizeof(sds), "%t", "ZM Teleport");
-			if (Arrow && ZMTP)
-				FormatEx(sds, sizeof(sds), "%t\n→ %t", "Arrow Marker", "ZM Teleport");
-			if (Arrow && Defend)
-				FormatEx(sds, sizeof(sds), "%t\n→ %t", "Arrow Marker", "Defend Here");
-			if (Arrow && NoHug)
-				FormatEx(sds, sizeof(sds), "%t\n→ %t", "Arrow Marker", "No Doorhug");
-			if (NoHug && ZMTP)
-				FormatEx(sds, sizeof(sds), "%t\n→ %t", "ZM Teleport", "No Doorhug");
-			if (Defend && ZMTP)
-				FormatEx(sds, sizeof(sds), "%t\n→ %t", "Defend Here", "ZM Teleport");
-			if (NoHug && Defend)
-				FormatEx(sds, sizeof(sds), "%t\n→ %t", "Defend Here", "No Doorhug");
-			if (Arrow && Defend && ZMTP)
-				FormatEx(sds, sizeof(sds), "%t\n→ %t\n→ %t", "Arrow Marker", "Defend Here", "No Doorhug");
-			if (Arrow && NoHug && ZMTP)
-				FormatEx(sds, sizeof(sds), "%t\n→ %t\n→ %t", "Arrow Marker", "ZM Teleport", "No Doorhug");
-			if (Defend && ZMTP && NoHug)
-				FormatEx(sds, sizeof(sds), "%t\n→ %t\n→ %t", "Defend Here", "ZM Teleport", "No Doorhug");
-			if (Arrow && Defend && NoHug && ZMTP)
-				FormatEx(sds, sizeof(sds), "%t\n→ %t\n→ %t\n→ %t", "Arrow Marker", "Defend Here", "ZM Teleport", "No Doorhug");
+		for (int type = 0; type < MK_TOTAL; type++) {
+			if (type == MK_PING || g_iClientMarker[type][client] == -1)
+				continue;
 
-			menu.SetTitle("%T \nActive Marker:\n→ %s", "Menu Leader title", client, sds);
-		} else
+			char sName[64];
+			switch (type) {
+				case MK_NORMAL: FormatEx(sName, sizeof(sName), "%t", "Arrow Marker");
+				case MK_DEFEND: FormatEx(sName, sizeof(sName), "%t", "Defend Here");
+				case MK_ZMTP:   FormatEx(sName, sizeof(sName), "%t", "ZM Teleport");
+				case MK_NOHUG:  FormatEx(sName, sizeof(sName), "%t", "No Doorhug");
+			}
+
+			if (iActive++)
+				StrCat(sActive, sizeof(sActive), "\n→ ");
+
+			StrCat(sActive, sizeof(sActive), sName);
+		}
+
+		if (iActive)
+			menu.SetTitle("%T \nActive Marker:\n→ %s", "Menu Leader title", client, sActive);
+		else
 			menu.SetTitle("%T", "Menu Leader title", client);
 	} else
 		menu.SetTitle("%T", "Menu Leader title", client);
@@ -1382,7 +1386,8 @@ stock void CreateTrail(int client) {
 
 	KillTrail(client);
 
-	if (!IsPlayerAlive(client) || !(1 < GetClientTeam(client) < 4))
+	int team = GetClientTeam(client);
+	if (!IsPlayerAlive(client) || (team != CS_TEAM_T && team != CS_TEAM_CT))
 		return;
 
 	if (GetEdictsCount() > MAXEDICTS) {
@@ -1391,6 +1396,8 @@ stock void CreateTrail(int client) {
 	}
 
 	int slot = GetLeaderIndexWithLeaderSlot(g_iClientLeaderSlot[client]);
+	if (slot == -1)
+		return;
 
 	g_TrailModel[client] = CreateEntityByName("env_spritetrail");
 
@@ -1406,9 +1413,9 @@ stock void CreateTrail(int client) {
 		DispatchSpawn(g_TrailModel[client]);
 
 		float angles[3], origin[3];
-		char angle[64][3];
+		char angle[3][16];
 
-		ExplodeString(g_sTrailPosition, " ", angle, 3, sizeof(angle), false);
+		ExplodeString(g_sTrailPosition, " ", angle, sizeof(angle), sizeof(angle[]), false);
 		angles[0] = StringToFloat(angle[0]);
 		angles[1] = StringToFloat(angle[1]);
 		angles[2] = StringToFloat(angle[2]);
@@ -1552,6 +1559,10 @@ public void CreatePingBeam(int client) {
 	if (!IsClientInGame(client) || !IsPlayerAlive(client))
 		return;
 
+	int slot = GetLeaderIndexWithLeaderSlot(g_iClientLeaderSlot[client]);
+	if (slot == -1)
+		return;
+
 	KillActivePingBeam(client);
 
 	g_iCooldownBeamPing[client] = GetTime();
@@ -1565,9 +1576,11 @@ public void CreatePingBeam(int client) {
 
 	CreateTimer(0.3, Timer_PingBeamRing, client | (g_Serial_Ping << 7), TIMER_REPEAT|TIMER_FLAG_NO_MAPCHANGE);
 
-	int slot = GetLeaderIndexWithLeaderSlot(g_iClientLeaderSlot[client]);
+	if (g_LeaderData[slot].L_MarkerPing_Sound[0] == '\0')
+		return;
+
 	for (int x = 1; x <= MaxClients; x++) {
-		if (!IsClientInGame(x) || GetClientTeam(x) != 3)
+		if (!IsClientInGame(x) || GetClientTeam(x) != CS_TEAM_CT || !g_bPingSound[x])
 			continue;
 		EmitSoundToClient(x, g_LeaderData[slot].L_MarkerPing_Sound, client, SNDCHAN_AUTO, _, _, 1.0);
 	}
@@ -1890,6 +1903,8 @@ public void SpawnMarker(int client, int type) {
 		GetClientAbsOrigin(client, g_fPos);
 
 	int slot = GetLeaderIndexWithLeaderSlot(g_iClientLeaderSlot[client]);
+	if (slot == -1)
+		return;
 
 	if (type == MK_NORMAL) {
 		g_iMarkerEntities[type][client] = SpawnSpecialMarker(client, g_LeaderData[slot].L_MarkerArrowVMT, type);
@@ -2125,13 +2140,8 @@ public Action HookPlayerChatTeam(int client, char[] command, int args) {
 }
 
 static Action HandleLeaderChat(int client, bool isSayTeam) {
-	if (g_bBlockLeaderChat) {
-		if (isSayTeam) {
-			RemoveCommandListener(HookPlayerChat, "say");
-			RemoveCommandListener(HookPlayerChatTeam, "say_team");
-		}
+	if (g_bBlockLeaderChat)
 		return Plugin_Continue;
-	}
 
 	if (!IsClientLeader(client))
 		return Plugin_Continue;
@@ -2143,7 +2153,7 @@ static Action HandleLeaderChat(int client, bool isSayTeam) {
 	if (LeaderText[0] == '/' || LeaderText[0] == '@' || strlen(LeaderText) == 0 || IsChatTrigger())
 		return Plugin_Handled;
 
-	char codename[32], szMessage[255];
+	char codename[32], szMessage[512];
 	GetLeaderCodename(g_iClientLeaderSlot[client], codename, sizeof(codename));
 
 	char prefix[16];
@@ -2159,11 +2169,11 @@ static Action HandleLeaderChat(int client, bool isSayTeam) {
 
 	if (isSayTeam) {
 		for (int i = 1; i <= MaxClients; i++) {
-			if (IsClientInGame(i) && GetClientTeam(i) == 3)
-				CPrintToChat(i, szMessage);
+			if (IsClientInGame(i) && GetClientTeam(i) == CS_TEAM_CT)
+				CPrintToChat(i, "%s", szMessage);
 		}
 	} else {
-		CPrintToChatAll(szMessage);
+		CPrintToChatAll("%s", szMessage);
 	}
 
 	return Plugin_Handled;
@@ -2235,6 +2245,8 @@ public Action Radio(int client, const char[] command, int argc) {
 		if (strcmp(command, "go", false) == 0) PrintRadio(client, "Go go go!");
 		if (strcmp(command, "fallback", false) == 0) PrintRadio(client, "Team, fall back!");
 		if (strcmp(command, "sticktog", false) == 0) PrintRadio(client, "Stick together, team.");
+		if (strcmp(command, "getinpos", false) == 0) PrintRadio(client, "Get in position and wait for my go!");
+		if (strcmp(command, "stormfront", false) == 0) PrintRadio(client, "Storm the front!");
 		if (strcmp(command, "report", false) == 0) PrintRadio(client, "Report in, team.");
 		if (strcmp(command, "roger", false) == 0) PrintRadio(client, "Roger that.");
 		if (strcmp(command, "enemyspot", false) == 0) PrintRadio(client, "Enemy spotted.");
@@ -2251,14 +2263,14 @@ public Action Radio(int client, const char[] command, int argc) {
 	return Plugin_Continue;
 }
 
-public void PrintRadio(int client, char[] text) {
+public void PrintRadio(int client, const char[] text) {
 	char szMessage[255], codename[32];
 
 	if (IsClientLeader(client)) {
 		GetLeaderCodename(g_iClientLeaderSlot[client], codename, sizeof(codename));
 		FormatEx(szMessage, sizeof(szMessage), "{darkred}[{orange}Leader %s{darkred}] {blue}%N {default}(RADIO): %s", codename, client, text);
 		for (int i = 1; i <= MaxClients; i++) {
-			if (IsClientInGame(i) && IsPlayerAlive(i) && GetClientTeam(i) == 3)
+			if (IsClientInGame(i) && IsPlayerAlive(i) && GetClientTeam(i) == CS_TEAM_CT)
 				CPrintToChat(i, "%s", szMessage);
 		}
 	}
@@ -2311,7 +2323,7 @@ void SetClientLeader(int client, int adminset = -1, int slot) {
 	}
 
 	Reset_ClientMarkerInUse(client);
-	for (int i = 0; i < MAX_MARKERS; i++) {
+	for (int i = 0; i < MK_TOTAL; i++) {
 		Reset_ClientMarker(client, i);
 	}
 
@@ -2564,12 +2576,25 @@ public int Native_SetLeader(Handle hPlugins, int numParams) {
 	int client = GetNativeCell(1);
 	int slot = GetNativeCell(2);
 
+	if (client < 1 || client > MaxClients || !IsClientInGame(client))
+		return ThrowNativeError(SP_ERROR_NATIVE, "Invalid client index (%d)", client);
+
+	if (slot < 0 || slot >= g_iTotalLeader)
+		return ThrowNativeError(SP_ERROR_NATIVE, "Invalid leader slot (%d)", slot);
+
+	if (!IsLeaderSlotFree(slot))
+		return ThrowNativeError(SP_ERROR_NATIVE, "Leader slot %d is already taken", slot);
+
 	SetClientLeader(client, -1, slot);
 	return 0;
 }
 
 public int Native_IsClientLeader(Handle hPlugins, int numParams) {
 	int client = GetNativeCell(1);
+
+	if (client < 1 || client > MaxClients)
+		return ThrowNativeError(SP_ERROR_NATIVE, "Invalid client index (%d)", client);
+
 	return IsClientLeader(client);
 }
 
@@ -2578,8 +2603,11 @@ public int Native_RemoveLeader(Handle hPlugins, int numParams) {
 	ResignReason reason = view_as<ResignReason>(GetNativeCell(2));
 	bool announce = view_as<bool>(GetNativeCell(3));
 
+	if (client < 1 || client > MaxClients)
+		return ThrowNativeError(SP_ERROR_NATIVE, "Invalid client index (%d)", client);
+
 	if (!IsClientLeader(client))
-		return ThrowNativeError(1, "The client %N is not the leader", client);
+		return ThrowNativeError(SP_ERROR_NATIVE, "The client (index %d) is not the leader", client);
 
 	RemoveLeader(client, reason, announce);
 	return 0;
@@ -2588,21 +2616,25 @@ public int Native_RemoveLeader(Handle hPlugins, int numParams) {
 public int Native_GetClientLeaderSlot(Handle hPlugins, int numParams) {
 	int client = GetNativeCell(1);
 
-	if (!IsClientLeader(client)) {
-		ThrowNativeError(1, "The client %N is not the leader", client);
-		return -1;
-	}
+	if (client < 1 || client > MaxClients)
+		return ThrowNativeError(SP_ERROR_NATIVE, "Invalid client index (%d)", client);
+
+	if (!IsClientLeader(client))
+		return ThrowNativeError(SP_ERROR_NATIVE, "The client (index %d) is not the leader", client);
 
 	return GetClientLeaderSlot(client);
 }
 
 public int Native_IsLeaderSlotFree(Handle hPlugins, int numParams) {
-	int slot = GetNativeCell(1);
-	return IsLeaderSlotFree(slot);
+	return IsLeaderSlotFree(GetNativeCell(1));
 }
 
 public int Native_IsPossibleLeader(Handle hPlugins, int numParams) {
 	int client = GetNativeCell(1);
+
+	if (client < 1 || client > MaxClients)
+		return ThrowNativeError(SP_ERROR_NATIVE, "Invalid client index (%d)", client);
+
 	return IsPossibleLeader(client);
 }
 
@@ -2641,10 +2673,10 @@ stock bool IsClientLeader(int client) {
 }
 
 stock bool IsLeaderSlotFree(int slot) {
-	if (g_iCurrentLeader[slot] == -1)
-		return true;
+	if (slot < 0 || slot >= MAXLEADER)
+		return false;
 
-	return false;
+	return g_iCurrentLeader[slot] == -1;
 }
 
 stock bool IsClientAdmin(int client) {
@@ -2672,15 +2704,7 @@ stock bool IsPossibleLeader(int client) {
 	return false;
 }
 
-stock bool IsLeaderOnline() {
-	for (int i = 1; i <= (MAXPOSSIBLELEADERS); i++) {
-		if (IsClientInGame(i) && !IsFakeClient(i) && IsPossibleLeader(i))
-			return true;
-	}
-	return false;
-}
-
-stock bool IsValidHex(char[] arg) {
+stock bool IsValidHex(const char[] arg) {
 	if (SimpleRegexMatch(arg, "^(#?)([A-Fa-f0-9]{6})$") == 0)
 		return false;
 	return true;
@@ -2691,7 +2715,7 @@ stock bool IsValidHex(char[] arg) {
 ============================================================================ */
 public bool Filter_Leaders(const char[] sPattern, Handle hClients) {
 	for (int i = 1; i <= MaxClients; i++) {
-		if (IsClientInGame(i) && !IsFakeClient(i) && (IsPossibleLeader(i) || (i < MAXLEADER && g_iCurrentLeader[i])))
+		if (IsClientInGame(i) && !IsFakeClient(i) && (IsPossibleLeader(i) || IsClientLeader(i)))
 			PushArrayCell(hClients, i);
 	}
 	return true;
@@ -2699,7 +2723,7 @@ public bool Filter_Leaders(const char[] sPattern, Handle hClients) {
 
 public bool Filter_NotLeaders(const char[] sPattern, Handle hClients) {
 	for (int i = 1; i <= MaxClients; i++) {
-		if (IsClientInGame(i) && !IsFakeClient(i) && !IsPossibleLeader(i) && (i >= MAXLEADER || !g_iCurrentLeader[i]))
+		if (IsClientInGame(i) && !IsFakeClient(i) && !IsPossibleLeader(i) && !IsClientLeader(i))
 			PushArrayCell(hClients, i);
 	}
 	return true;
@@ -2707,7 +2731,7 @@ public bool Filter_NotLeaders(const char[] sPattern, Handle hClients) {
 
 public bool Filter_Leader(const char[] sPattern, Handle hClients) {
 	for (int i = 1; i <= MaxClients; i++) {
-		if (IsClientInGame(i) && !IsFakeClient(i) && i < MAXLEADER && g_iCurrentLeader[i])
+		if (IsClientInGame(i) && !IsFakeClient(i) && IsClientLeader(i))
 			PushArrayCell(hClients, i);
 	}
 	return true;
@@ -2715,7 +2739,7 @@ public bool Filter_Leader(const char[] sPattern, Handle hClients) {
 
 public bool Filter_NotLeader(const char[] sPattern, Handle hClients) {
 	for (int i = 1; i <= MaxClients; i++) {
-		if (IsClientInGame(i) && !IsFakeClient(i) && (i >= MAXLEADER || !g_iCurrentLeader[i]))
+		if (IsClientInGame(i) && !IsFakeClient(i) && !IsClientLeader(i))
 			PushArrayCell(hClients, i);
 	}
 	return true;
@@ -2768,6 +2792,11 @@ stock void UpdateLeaders() {
 
 		if ((line[0] == '/' && line[1] == '/') || (line[0] == ';' || line[0] == '\0'))
 			continue;
+
+		if (iIndex >= MAXPOSSIBLELEADERS) {
+			LogError("leaders.ini holds more than %d entries; ignoring the rest.", MAXPOSSIBLELEADERS);
+			break;
+		}
 
 		sAuth = "";
 		BreakString(line, sAuth, sizeof(sAuth));
