@@ -108,6 +108,24 @@
 		"ru"		"Неверный клиент."
 	}
 
+	"This command can only be used in-game."
+	{
+		"en"		"This command can only be used in-game."
+		"ru"		"Эта команда доступна только в игре."
+	}
+
+	"Target must be alive"
+	{
+		"en"		"Target must be alive."
+		"ru"		"Цель должна быть жива."
+	}
+
+	"Target is not in game"
+	{
+		"en"		"Target is not in game."
+		"ru"		"Цель отсутствует в игре."
+	}
+
 	"Client is not leader"
 	{
 		"#format" 	"{1:N}"
@@ -282,11 +300,6 @@
 		"en"		"Arrow Marker"
 	}
 	
-	"Defend Here"
-	{
-		"en"		"Defend Here"
-	}
-
 	"ZM Teleport"
 	{
 		"en"		"ZM Teleport"
@@ -319,6 +332,12 @@
 	{
 		"en"		"Marker Postion"
 		"ru"		"Позиция маркера"
+	}
+
+	"Ping Sound"
+	{
+		"en"		"Ping Sound"
+		"ru"		"Звук пинга"
 	}
 
 	"Enabled"
@@ -362,6 +381,13 @@
 		"#format"	"{1:s}"
 		"en"		"You have {1} {default}leader shortcut key."
 		"ru"		"У вас стоит кнопка {1} {default}как шорткат для лидер-меню."
+	}
+
+	"You set pingsound"
+	{
+		"#format"	"{1:s}"
+		"en"		"Leader ping sound: {1}{default}."
+		"ru"		"Звук пинга лидера: {1}{default}."
 	}
 
 	"Marker Pos Crosshair"
