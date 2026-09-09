@@ -108,24 +108,6 @@
 		"ru"		"Неверный клиент."
 	}
 
-	"This command can only be used in-game."
-	{
-		"en"		"This command can only be used in-game."
-		"ru"		"Эта команда доступна только в игре."
-	}
-
-	"Target must be alive"
-	{
-		"en"		"Target must be alive."
-		"ru"		"Цель должна быть жива."
-	}
-
-	"Target is not in game"
-	{
-		"en"		"Target is not in game."
-		"ru"		"Цель отсутствует в игре."
-	}
-
 	"Client is not leader"
 	{
 		"#format" 	"{1:N}"

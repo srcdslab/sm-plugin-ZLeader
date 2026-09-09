@@ -839,7 +839,7 @@ public Action Command_Leader(int client, int args) {
 
 	if (args == 0) {
 		if (client <= 0) {
-			ReplyToCommand(client, "%T %T", "Prefix", client, "This command can only be used in-game.", client);
+			ReplyToCommand(client, "%T %T", "Prefix", client, "Command is in-game only", client);
 			return Plugin_Handled;
 		}
 
@@ -1157,7 +1157,7 @@ public int CurrentLeaderMenuHandler(Menu menu, MenuAction action, int param1, in
 ============================================================================ */
 public Action Command_VoteLeader(int client, int args) {
 	if (client <= 0) {
-		ReplyToCommand(client, "%T %T", "Prefix", client, "This command can only be used in-game.", client);
+		ReplyToCommand(client, "%T %T", "Prefix", client, "Command is in-game only", client);
 		return Plugin_Handled;
 	}
 	int count = 0;
