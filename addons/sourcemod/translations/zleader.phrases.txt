@@ -282,11 +282,6 @@
 		"en"		"Arrow Marker"
 	}
 	
-	"Defend Here"
-	{
-		"en"		"Defend Here"
-	}
-
 	"ZM Teleport"
 	{
 		"en"		"ZM Teleport"
@@ -319,6 +314,12 @@
 	{
 		"en"		"Marker Postion"
 		"ru"		"Позиция маркера"
+	}
+
+	"Ping Sound"
+	{
+		"en"		"Ping Sound"
+		"ru"		"Звук пинга"
 	}
 
 	"Enabled"
@@ -362,6 +363,13 @@
 		"#format"	"{1:s}"
 		"en"		"You have {1} {default}leader shortcut key."
 		"ru"		"У вас стоит кнопка {1} {default}как шорткат для лидер-меню."
+	}
+
+	"You set pingsound"
+	{
+		"#format"	"{1:s}"
+		"en"		"Leader ping sound: {1}{default}."
+		"ru"		"Звук пинга лидера: {1}{default}."
 	}
 
 	"Marker Pos Crosshair"
