@@ -2383,7 +2383,7 @@ void RemoveLeader(int client, ResignReason reason, bool announce = true) {
 		g_bResignedByAdmin[client] = true;
 
 	if (announce) {
-		for (int i = 1; i < MaxClients; i++) {
+		for (int i = 1; i <= MaxClients; i++) {
 			if (!IsClientInGame(i))
 				continue;
 
