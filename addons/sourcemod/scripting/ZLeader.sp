@@ -838,7 +838,7 @@ public Action Command_Leader(int client, int args) {
 	SetGlobalTransTarget(client);
 
 	if (args == 0) {
-		if (client <= 0) {
+		if (client <= 0 || !IsClientInGame(client)) {
 			ReplyToCommand(client, "%T %T", "Prefix", client, "Command is in-game only", client);
 			return Plugin_Handled;
 		}
