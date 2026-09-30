@@ -209,92 +209,110 @@
 	"Menu Prefix"
 	{
 		"en"		"[ZLeader]"
+		"ru"		"[ZLeader]"
 	}
 
 	"Menu Leader title"
 	{
 		"en"		"Leader Menu"
+		"ru"		"Меню лидера"
 	}
 
 	"Menu Leader list title"
 	{
 		"en"		"Leader list menu"
+		"ru"		"Список лидеров"
 	}
 
 	"Menu Remove Leader title"
 	{
 		"en"		"Select leader to remove them"
+		"ru"		"Выберите лидера для снятия"
 	}
 
 	"None"
 	{
 		"en"		"None"
+		"ru"		"Нет"
 	}
 
 	"Defend Here"
 	{
 		"en"		"Defend Here"
+		"ru"		"Обороняйтесь здесь"
 	}
 
 	"Follow Me"
 	{
 		"en"		"Follow Me"
+		"ru"		"За мной"
 	}
 
 	"Toggle Beacon"
 	{
 		"en"		"Toggle Beacon"
+		"ru"		"Переключить маяк"
 	}
 	
 	"Toggle Trail"
 	{
 		"en"		"Toggle Trail"
+		"ru"		"Переключить след"
 	}
 
 	"Toggle Tracers"
 	{
 		"en"		"Toggle Tracers"
+		"ru"		"Переключить трассеры"
 	}
 
 	"Place Marker"
 	{
 		"en"		"Place Marker"
+		"ru"		"Поставить маркер"
 	}
 
 	"Remove Marker"
 	{
 		"en"		"Remove Markers"
+		"ru"		"Убрать маркеры"
 	}
 
 	"Resign from Leader"
 	{
 		"en"		"Resign from Leader"
+		"ru"		"Отказаться от лидерства"
 	}
 
 	// Marker Menu
 	"Marker menu title"
 	{
 		"en"		"Marker Menu"
+		"ru"		"Меню маркеров"
 	}
 
 	"Arrow Marker"
 	{
 		"en"		"Arrow Marker"
+		"ru"		"Маркер-стрелка"
 	}
 	
 	"ZM Teleport"
 	{
 		"en"		"ZM Teleport"
+		"ru"		"Телепорт зомби"
 	}
 
 	"No Doorhug"
 	{
 		"en"		"No Doorhug"
+		"ru"		"Не стоять у двери"
 	}
 	
 	"Ping Marker"
 	{
 		"en"		"Ping a Location"
+		"ru"		"Отметить место"
 	}
 
 	// Preference
