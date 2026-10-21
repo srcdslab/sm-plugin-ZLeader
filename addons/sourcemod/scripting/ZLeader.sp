@@ -747,7 +747,7 @@ public void ZR_OnClientInfected(int client, int attacker, bool motherinfect, boo
 
 public void OnRoundEnd(Event event, const char[] name, bool dontBroadcast) {
 	// We create timer for don't insta remove leader (usefull for API)
-	CreateTimer(0.3, Timer_RoundEndClean, INVALID_HANDLE, TIMER_FLAG_NO_MAPCHANGE);
+	CreateTimer(0.3, Timer_RoundEndClean, _, TIMER_FLAG_NO_MAPCHANGE);
 	KillAllBeacons();
 	KillAllPingsBeam();
 }
@@ -2713,34 +2713,34 @@ stock bool IsValidHex(const char[] arg) {
 /* =========================================================================
 ||  Filters
 ============================================================================ */
-public bool Filter_Leaders(const char[] sPattern, Handle hClients) {
+public bool Filter_Leaders(const char[] sPattern, ArrayList hClients) {
 	for (int i = 1; i <= MaxClients; i++) {
 		if (IsClientInGame(i) && !IsFakeClient(i) && (IsPossibleLeader(i) || IsClientLeader(i)))
-			PushArrayCell(hClients, i);
+			hClients.Push(i);
 	}
 	return true;
 }
 
-public bool Filter_NotLeaders(const char[] sPattern, Handle hClients) {
+public bool Filter_NotLeaders(const char[] sPattern, ArrayList hClients) {
 	for (int i = 1; i <= MaxClients; i++) {
 		if (IsClientInGame(i) && !IsFakeClient(i) && !IsPossibleLeader(i) && !IsClientLeader(i))
-			PushArrayCell(hClients, i);
+			hClients.Push(i);
 	}
 	return true;
 }
 
-public bool Filter_Leader(const char[] sPattern, Handle hClients) {
+public bool Filter_Leader(const char[] sPattern, ArrayList hClients) {
 	for (int i = 1; i <= MaxClients; i++) {
 		if (IsClientInGame(i) && !IsFakeClient(i) && IsClientLeader(i))
-			PushArrayCell(hClients, i);
+			hClients.Push(i);
 	}
 	return true;
 }
 
-public bool Filter_NotLeader(const char[] sPattern, Handle hClients) {
+public bool Filter_NotLeader(const char[] sPattern, ArrayList hClients) {
 	for (int i = 1; i <= MaxClients; i++) {
 		if (IsClientInGame(i) && !IsFakeClient(i) && !IsClientLeader(i))
-			PushArrayCell(hClients, i);
+			hClients.Push(i);
 	}
 	return true;
 }
