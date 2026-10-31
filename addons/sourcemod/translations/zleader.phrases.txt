@@ -5,49 +5,89 @@
 	{
 		"en"    	"{green}[ZLeader]{default}"
 		"ru"    	"{green}[ZLeader]{default}"
+		"fr"		"{green}[ZLeader]{default}"
+		"es"		"{green}[ZLeader]{default}"
+		"de"		"{green}[ZLeader]{default}"
+		"pt"		"{green}[ZLeader]{default}"
+		"chi"		"{green}[ZLeader]{default}"
 	}
 	
 	"Request Access"
 	{
 		"en"    	"You need to request Leader Access!"
-		"ru"		"Вам необходимо запросить Лидерский Доступ!"
+		"ru"		"Вам необходимо запросить доступ лидера!"
+		"fr"		"Vous devez demander l'accès leader!"
+		"es"		"¡Necesitas solicitar acceso de líder!"
+		"de"		"Du musst Leader-Zugang beantragen!"
+		"pt"		"Você precisa solicitar acesso de líder!"
+		"chi"		"你需要申请指挥权限！"
 	}
 
 	"Slot is full"
 	{
-		"en"    	"All Leader slot are full!"
-		"ru"    	"Все Лидер слоты заполнены!"
+		"en"    	"All Leader slots are full!"
+		"ru"    	"Все слоты лидеров заняты!"
+		"fr"		"Tous les slots de leader sont occupés!"
+		"es"		"¡Todos los puestos de líder están ocupados!"
+		"de"		"Alle Leader-Slots sind belegt!"
+		"pt"		"Todas as vagas de líder estão ocupadas!"
+		"chi"		"所有指挥位都已满！"
 	}
 
 	"You set client leader"
 	{
 		"#format"	"{1:N}" 
 		"en"		"You have set leader on {lime}{1}{default}."
-		"ru"		"Вы дали меню лидера игроку {lime}{1}{default}."
+		"ru"		"Вы назначили лидером игрока {lime}{1}{default}."
+		"fr"		"Vous avez désigné {lime}{1}{default} comme leader."
+		"es"		"Has nombrado líder a {lime}{1}{default}."
+		"de"		"Du hast {lime}{1}{default} zum Leader gemacht."
+		"pt"		"Você definiu {lime}{1}{default} como líder."
+		"chi"		"你已将 {lime}{1}{default} 设为指挥。"
 	}
 	
 	"Leader usage"
 	{
 		"en"		"Usage: sm_leader <player>"
 		"ru"		"Используйте: sm_leader <player>"
+		"fr"		"Utilisation: sm_leader <joueur>"
+		"es"		"Uso: sm_leader <jugador>"
+		"de"		"Verwendung: sm_leader <Spieler>"
+		"pt"		"Uso: sm_leader <jogador>"
+		"chi"		"用法：sm_leader <玩家>"
 	}
 
 	"Vote leader usage"
 	{
 		"en"		"Usage: sm_voteleader <player>"
 		"ru"		"Используйте: sm_voteleader <player>"
+		"fr"		"Utilisation: sm_voteleader <joueur>"
+		"es"		"Uso: sm_voteleader <jugador>"
+		"de"		"Verwendung: sm_voteleader <Spieler>"
+		"pt"		"Uso: sm_voteleader <jogador>"
+		"chi"		"用法：sm_voteleader <玩家>"
 	}
 	
 	"Remove leader usage"
 	{
 		"en"		"Usage: sm_removeleader <player>"
 		"ru"		"Используйте: sm_removeleader <player>"
+		"fr"		"Utilisation: sm_removeleader <joueur>"
+		"es"		"Uso: sm_removeleader <jugador>"
+		"de"		"Verwendung: sm_removeleader <Spieler>"
+		"pt"		"Uso: sm_removeleader <jogador>"
+		"chi"		"用法：sm_removeleader <玩家>"
 	}
 
 	"Already vote client"
 	{
 		"en"		"You have already voted for this player!"
 		"ru"		"Вы уже проголосовали за этого игрока!"
+		"fr"		"Vous avez déjà voté pour ce joueur!"
+		"es"		"¡Ya has votado por este jugador!"
+		"de"		"Du hast bereits für diesen Spieler gestimmt!"
+		"pt"		"Você já votou neste jogador!"
+		"chi"		"你已经投票给这名玩家了！"
 	}
 
 	"Already Leader"
@@ -55,24 +95,44 @@
 		"#format"	"{1:N}"
 		"en"		"{lightblue}{1}{default} is already leader!"
 		"ru"		"{lightblue}{1}{default} уже является лидером!"
+		"fr"		"{lightblue}{1}{default} est déjà leader!"
+		"es"		"¡{lightblue}{1}{default} ya es líder!"
+		"de"		"{lightblue}{1}{default} ist bereits Leader!"
+		"pt"		"{lightblue}{1}{default} já é líder!"
+		"chi"		"{lightblue}{1}{default} 已经是指挥了！"
 	}
 
 	"Has to be human"
 	{
 		"en"		"You have to vote for a human!"
 		"ru"		"Можно голосовать только за живых людей!"
+		"fr"		"Vous devez voter pour un humain!"
+		"es"		"¡Tienes que votar por un humano!"
+		"de"		"Du musst für einen Menschen stimmen!"
+		"pt"		"Você precisa votar em um humano!"
+		"chi"		"你只能投票给人类！"
 	}
 
 	"It's Zombie"
 	{
-		"en"		"Leader has to be alive human!"
-		"ru"		"Лидер должен быть за живых людей!"
+		"en"		"Leader has to be a living human!"
+		"ru"		"Лидер должен быть живым человеком!"
+		"fr"		"Le leader doit être un humain en vie!"
+		"es"		"¡El líder tiene que ser un humano vivo!"
+		"de"		"Der Leader muss ein lebender Mensch sein!"
+		"pt"		"O líder precisa ser um humano vivo!"
+		"chi"		"指挥必须是存活的人类！"
 	}
 
 	"Leader should not be muted"
 	{
 		"en"		"Leader should not have active comms punishment!"
 		"ru"		"Лидер не должен иметь активное наказание за общение!"
+		"fr"		"Le leader ne doit pas avoir de sanction de communication en cours!"
+		"es"		"¡El líder no puede tener una sanción de comunicación activa!"
+		"de"		"Der Leader darf keine aktive Kommunikationssperre haben!"
+		"pt"		"O líder não pode ter uma punição de comunicação ativa!"
+		"chi"		"指挥不能处于禁言或禁麦状态！"
 	}
 
 	"Leader was resigned by Admin"
@@ -80,32 +140,57 @@
 		"#format"	"{1:N}" 
 		"en"		"{1} was resigned by Admin, and can't be leader."
 		"ru"		"{1} был снят администратором и не может быть лидером."
+		"fr"		"{1} a été destitué par un admin et ne peut pas être leader."
+		"es"		"{1} fue destituido por un admin y no puede ser líder."
+		"de"		"{1} wurde von einem Admin abgesetzt und kann kein Leader sein."
+		"pt"		"{1} foi removido por um admin e não pode ser líder."
+		"chi"		"{1} 已被管理员撤销指挥，无法成为指挥。"
 	}
 	
 	"Leader cache refreshed"
 	{
 		"en"		"Leaders cache has been refreshed."
 		"ru"		"Кэш лидеров успешно перезагружен."
+		"fr"		"Le cache des leaders a été actualisé."
+		"es"		"La caché de líderes se ha actualizado."
+		"de"		"Der Leader-Cache wurde aktualisiert."
+		"pt"		"O cache de líderes foi atualizado."
+		"chi"		"指挥缓存已刷新。"
 	}
 
 	"Vote for client"
 	{
 		"#format"	"{1:N},{2:N},{3:i},{4:i}" 
-		"en"    	"{1} has voted for {2} to be the leader. ({3} votes, {4} requiered)"
-		"ru"    	"{1} проголосовал за {2} чтобы он стал лидером. ({3} голос(а)(ов), {4} небходимо)"
+		"en"    	"{1} has voted for {2} to be the leader. ({3} votes, {4} required)"
+		"ru"    	"{1} проголосовал за {2}, чтобы он стал лидером. ({3} голос(а)(ов), {4} необходимо)"
+		"fr"		"{1} a voté pour que {2} devienne leader. ({3} votes, {4} requis)"
+		"es"		"{1} ha votado para que {2} sea el líder. ({3} votos, {4} necesarios)"
+		"de"		"{1} hat dafür gestimmt, dass {2} Leader wird. ({3} Stimmen, {4} benötigt)"
+		"pt"		"{1} votou para {2} ser o líder. ({3} votos, {4} necessários)"
+		"chi"		"{1} 投票让 {2} 成为指挥。({3} 票，需要 {4} 票)"
 	}
 	
 	"VoteLeader Cooldown"
 	{
 		"#format"	"{1:i}"
 		"en"		"You are currently on cooldown. You can vote again in {1}s."
-		"ru"		"Команда в перезарядке. Вы можете голосовать опять черз {1}с."
+		"ru"		"Команда на перезарядке. Вы сможете снова проголосовать через {1}с."
+		"fr"		"Vous êtes actuellement en cooldown. Vous pourrez revoter dans {1}s."
+		"es"		"Estás en tiempo de espera. Podrás votar de nuevo en {1}s."
+		"de"		"Du hast gerade Cooldown. Du kannst in {1}s erneut abstimmen."
+		"pt"		"Você está em cooldown. Poderá votar novamente em {1}s."
+		"chi"		"你正处于冷却中，{1} 秒后才能再次投票。"
 	}
 
 	"Invalid client"
 	{
 		"en"		"Invalid client."
 		"ru"		"Неверный клиент."
+		"fr"		"Joueur invalide."
+		"es"		"Jugador no válido."
+		"de"		"Ungültiger Spieler."
+		"pt"		"Jogador inválido."
+		"chi"		"无效的玩家。"
 	}
 
 	"Client is not leader"
@@ -113,12 +198,22 @@
 		"#format" 	"{1:N}"
 		"en"		"{1} is not the leader!"
 		"ru"		"{1} не является лидером!"
+		"fr"		"{1} n'est pas leader!"
+		"es"		"¡{1} no es el líder!"
+		"de"		"{1} ist kein Leader!"
+		"pt"		"{1} não é o líder!"
+		"chi"		"{1} 不是指挥！"
 	}
 	
 	"Current Leaders"
 	{
 		"en"		"Current Leaders:"
 		"ru"		"Лидеры в данный момент:"
+		"fr"		"Leaders actuels:"
+		"es"		"Líderes actuales:"
+		"de"		"Aktuelle Leader:"
+		"pt"		"Líderes atuais:"
+		"chi"		"当前指挥："
 	}
 	
 	"Possible Leaders"
@@ -126,12 +221,22 @@
 		"#format"	"{1:s}"
 		"en"		"Possible Leaders online: {olive}{1}"
 		"ru"		"Возможные лидеры онлайн: {olive}{1}"
+		"fr"		"Leaders possibles en ligne: {olive}{1}"
+		"es"		"Posibles líderes en línea: {olive}{1}"
+		"de"		"Mögliche Leader online: {olive}{1}"
+		"pt"		"Possíveis líderes online: {olive}{1}"
+		"chi"		"在线的可选指挥：{olive}{1}"
 	}
 	
 	"Possible Leaders None"
 	{
 		"en"		"Possible Leaders online: {olive}None."
 		"ru"		"Возможные лидеры онлайн: {olive}Никто."
+		"fr"		"Leaders possibles en ligne: {olive}Aucun."
+		"es"		"Posibles líderes en línea: {olive}Ninguno."
+		"de"		"Mögliche Leader online: {olive}Keine."
+		"pt"		"Possíveis líderes online: {olive}Nenhum."
+		"chi"		"在线的可选指挥：{olive}无。"
 	}
 
 	"Become New Leader"
@@ -139,6 +244,11 @@
 		"#format"	"{1:N},{2:s}"
 		"en"		"{lightblue}{1}{default} has become Leader {darkred}[{orange}{2}{darkred}]"
 		"ru"		"{lightblue}{1}{default} стал лидером {darkred}[{orange}{2}{darkred}]"
+		"fr"		"{lightblue}{1}{default} est devenu leader {darkred}[{orange}{2}{darkred}]"
+		"es"		"{lightblue}{1}{default} se ha convertido en líder {darkred}[{orange}{2}{darkred}]"
+		"de"		"{lightblue}{1}{default} ist jetzt Leader {darkred}[{orange}{2}{darkred}]"
+		"pt"		"{lightblue}{1}{default} se tornou líder {darkred}[{orange}{2}{darkred}]"
+		"chi"		"{lightblue}{1}{default} 成为了指挥 {darkred}[{orange}{2}{darkred}]"
 	}
 	
 	"Cooldown Ping"
@@ -146,12 +256,22 @@
 		"#format"	"{1:d}"
 		"en"		"Cannot ping. Ping is on cooldown. {red}({1} seconds)"
 		"ru"		"Нельзя пинговать. Пинг в перезарядке. {red}({1} секунд)"
+		"fr"		"Impossible de ping. Le ping est en cooldown. {red}({1} secondes)"
+		"es"		"No puedes hacer ping. El ping está en tiempo de espera. {red}({1} segundos)"
+		"de"		"Ping nicht möglich. Der Ping hat noch Cooldown. {red}({1} Sekunden)"
+		"pt"		"Não é possível pingar. O ping está em cooldown. {red}({1} segundos)"
+		"chi"		"无法标点，标点正在冷却中。{red}({1} 秒)"
 	}
 
 	"Edicts Limit"
 	{
-		"en"		"Action canceled. Server reached edicts limit. Please try again later.."
-		"ru"		"Действие отменено. Сервер достиг лимита edicts. Пожалуйста, попробуйте позже.."
+		"en"		"Action canceled. Server reached edicts limit. Please try again later."
+		"ru"		"Действие отменено. Сервер достиг лимита edicts. Пожалуйста, попробуйте позже."
+		"fr"		"Action annulée. Le serveur a atteint la limite d'edicts. Veuillez réessayer plus tard."
+		"es"		"Acción cancelada. El servidor alcanzó el límite de edicts. Inténtalo de nuevo más tarde."
+		"de"		"Aktion abgebrochen. Der Server hat das Edict-Limit erreicht. Bitte versuche es später erneut."
+		"pt"		"Ação cancelada. O servidor atingiu o limite de edicts. Tente novamente mais tarde."
+		"chi"		"操作已取消。服务器已达到 edict 上限，请稍后再试。"
 	}
 
 	// Remove Reason
@@ -160,13 +280,23 @@
 		"#format"	"{1:s},{2:N}"
 		"en"		"{orange}Leader {darkred}[{orange}{1}{darkred}] {olive}{2}{default} has disconnected from the server!"
 		"ru"		"{orange}Лидер {darkred}[{orange}{1}{darkred}] {olive}{2}{default} вышел с сервера!"
+		"fr"		"{orange}Le leader {darkred}[{orange}{1}{darkred}] {olive}{2}{default} s'est déconnecté du serveur!"
+		"es"		"{orange}¡El líder {darkred}[{orange}{1}{darkred}] {olive}{2}{default} se ha desconectado del servidor!"
+		"de"		"{orange}Leader {darkred}[{orange}{1}{darkred}] {olive}{2}{default} hat den Server verlassen!"
+		"pt"		"{orange}O líder {darkred}[{orange}{1}{darkred}] {olive}{2}{default} se desconectou do servidor!"
+		"chi"		"{orange}指挥 {darkred}[{orange}{1}{darkred}] {olive}{2}{default} 已断开与服务器的连接！"
 	}
 
 	"Remove Admin Force"
 	{
 		"#format"	"{1:s},{2:N}"
 		"en"		"{orange}Leader {darkred}[{orange}{1}{darkred}] {olive}{2}{default} has been resigned by admin!"
-		"ru"		"{orange}Лидер {darkred}[{orange}{1}{darkred}] {olive}{2}{default} был снят администратором"
+		"ru"		"{orange}Лидер {darkred}[{orange}{1}{darkred}] {olive}{2}{default} был снят администратором!"
+		"fr"		"{orange}Le leader {darkred}[{orange}{1}{darkred}] {olive}{2}{default} a été destitué par un admin!"
+		"es"		"{orange}¡El líder {darkred}[{orange}{1}{darkred}] {olive}{2}{default} ha sido destituido por un admin!"
+		"de"		"{orange}Leader {darkred}[{orange}{1}{darkred}] {olive}{2}{default} wurde von einem Admin abgesetzt!"
+		"pt"		"{orange}O líder {darkred}[{orange}{1}{darkred}] {olive}{2}{default} foi removido por um admin!"
+		"chi"		"{orange}指挥 {darkred}[{orange}{1}{darkred}] {olive}{2}{default} 已被管理员撤销！"
 	}
 
 	"Remove Self Resign"
@@ -174,13 +304,23 @@
 		"#format"	"{1:s},{2:N}"
 		"en"		"{orange}Leader {darkred}[{orange}{1}{darkred}] {olive}{2}{default} has resigned by him/herself!"
 		"ru"		"{orange}Лидер {darkred}[{orange}{1}{darkred}] {olive}{2}{default} подал в отставку!"
+		"fr"		"{orange}Le leader {darkred}[{orange}{1}{darkred}] {olive}{2}{default} a démissionné de lui-même!"
+		"es"		"{orange}¡El líder {darkred}[{orange}{1}{darkred}] {olive}{2}{default} ha renunciado por sí mismo!"
+		"de"		"{orange}Leader {darkred}[{orange}{1}{darkred}] {olive}{2}{default} ist freiwillig zurückgetreten!"
+		"pt"		"{orange}O líder {darkred}[{orange}{1}{darkred}] {olive}{2}{default} renunciou por conta própria!"
+		"chi"		"{orange}指挥 {darkred}[{orange}{1}{darkred}] {olive}{2}{default} 主动辞去了指挥！"
 	}
 
 	"Remove Spectator"
 	{
 		"#format"	"{1:s},{2:N}"
 		"en"		"{orange}Leader {darkred}[{orange}{1}{darkred}] {olive}{2}{default} has been resigned for moving to spectator!"
-		"ru"		"{orange}Лидер {darkred}[{orange}{1}{darkred}] {olive}{2}{default} был снят потому что ушел в наблюдатели!"
+		"ru"		"{orange}Лидер {darkred}[{orange}{1}{darkred}] {olive}{2}{default} был снят, потому что ушёл в наблюдатели!"
+		"fr"		"{orange}Le leader {darkred}[{orange}{1}{darkred}] {olive}{2}{default} a été destitué pour être passé spectateur!"
+		"es"		"{orange}¡El líder {darkred}[{orange}{1}{darkred}] {olive}{2}{default} ha sido destituido por pasarse a espectador!"
+		"de"		"{orange}Leader {darkred}[{orange}{1}{darkred}] {olive}{2}{default} wurde abgesetzt, weil er zu den Zuschauern gewechselt ist!"
+		"pt"		"{orange}O líder {darkred}[{orange}{1}{darkred}] {olive}{2}{default} foi removido por mudar para espectador!"
+		"chi"		"{orange}指挥 {darkred}[{orange}{1}{darkred}] {olive}{2}{default} 因切换到观察者而被撤销！"
 	}
 
 	"Remove Died"
@@ -188,13 +328,23 @@
 		"#format"	"{1:s},{2:N}"
 		"en"		"{orange}Leader {darkred}[{orange}{1}{darkred}] {olive}{2}{default} has died and got resigned!"
 		"ru"		"{orange}Лидер {darkred}[{orange}{1}{darkred}] {olive}{2}{default} умер и был снят!"
+		"fr"		"{orange}Le leader {darkred}[{orange}{1}{darkred}] {olive}{2}{default} est mort et a été destitué!"
+		"es"		"{orange}¡El líder {darkred}[{orange}{1}{darkred}] {olive}{2}{default} ha muerto y ha sido destituido!"
+		"de"		"{orange}Leader {darkred}[{orange}{1}{darkred}] {olive}{2}{default} ist gestorben und wurde abgesetzt!"
+		"pt"		"{orange}O líder {darkred}[{orange}{1}{darkred}] {olive}{2}{default} morreu e foi removido!"
+		"chi"		"{orange}指挥 {darkred}[{orange}{1}{darkred}] {olive}{2}{default} 已阵亡，被撤销指挥！"
 	}
 
 	"Remove Infected"
 	{
 		"#format"	"{1:s},{2:N}"
-		"en"		"{orange}Leader {darkred}[{orange}{1}{darkred}] {olive}{2}{default} get infected and got resigned!"
+		"en"		"{orange}Leader {darkred}[{orange}{1}{darkred}] {olive}{2}{default} got infected and got resigned!"
 		"ru"		"{orange}Лидер {darkred}[{orange}{1}{darkred}] {olive}{2}{default} заразился и был снят!"
+		"fr"		"{orange}Le leader {darkred}[{orange}{1}{darkred}] {olive}{2}{default} a été infecté et destitué!"
+		"es"		"{orange}¡El líder {darkred}[{orange}{1}{darkred}] {olive}{2}{default} ha sido infectado y destituido!"
+		"de"		"{orange}Leader {darkred}[{orange}{1}{darkred}] {olive}{2}{default} wurde infiziert und abgesetzt!"
+		"pt"		"{orange}O líder {darkred}[{orange}{1}{darkred}] {olive}{2}{default} foi infectado e removido!"
+		"chi"		"{orange}指挥 {darkred}[{orange}{1}{darkred}] {olive}{2}{default} 已被感染，被撤销指挥！"
 	}
 
 	"Marker Max Limit"
@@ -202,6 +352,11 @@
 		"#format"	"{1:d}"
 		"en"		"You have reached the limit of {1} active markers."
 		"ru"		"Вы достигли лимита в {1} активных маркеров."
+		"fr"		"Vous avez atteint la limite de {1} marqueurs actifs."
+		"es"		"Has alcanzado el límite de {1} marcadores activos."
+		"de"		"Du hast das Limit von {1} aktiven Markern erreicht."
+		"pt"		"Você atingiu o limite de {1} marcadores ativos."
+		"chi"		"你已达到 {1} 个有效标记的上限。"
 	}
 
 
@@ -210,78 +365,143 @@
 	{
 		"en"		"[ZLeader]"
 		"ru"		"[ZLeader]"
+		"fr"		"[ZLeader]"
+		"es"		"[ZLeader]"
+		"de"		"[ZLeader]"
+		"pt"		"[ZLeader]"
+		"chi"		"[ZLeader]"
 	}
 
 	"Menu Leader title"
 	{
 		"en"		"Leader Menu"
 		"ru"		"Меню лидера"
+		"fr"		"Menu leader"
+		"es"		"Menú de líder"
+		"de"		"Leader-Menü"
+		"pt"		"Menu de líder"
+		"chi"		"指挥菜单"
 	}
 
 	"Menu Leader list title"
 	{
 		"en"		"Leader list menu"
 		"ru"		"Список лидеров"
+		"fr"		"Liste des leaders"
+		"es"		"Lista de líderes"
+		"de"		"Leader-Liste"
+		"pt"		"Lista de líderes"
+		"chi"		"指挥列表"
 	}
 
 	"Menu Remove Leader title"
 	{
 		"en"		"Select leader to remove them"
 		"ru"		"Выберите лидера для снятия"
+		"fr"		"Choisissez un leader à retirer"
+		"es"		"Selecciona un líder para quitarlo"
+		"de"		"Wähle einen Leader zum Entfernen"
+		"pt"		"Selecione um líder para removê-lo"
+		"chi"		"选择要撤销的指挥"
 	}
 
 	"None"
 	{
 		"en"		"None"
 		"ru"		"Нет"
+		"fr"		"Aucun"
+		"es"		"Ninguno"
+		"de"		"Keiner"
+		"pt"		"Nenhum"
+		"chi"		"无"
 	}
 
 	"Defend Here"
 	{
 		"en"		"Defend Here"
 		"ru"		"Обороняйтесь здесь"
+		"fr"		"Défendez ici"
+		"es"		"Defender aquí"
+		"de"		"Hier verteidigen"
+		"pt"		"Defendam aqui"
+		"chi"		"在此防守"
 	}
 
 	"Follow Me"
 	{
 		"en"		"Follow Me"
 		"ru"		"За мной"
+		"fr"		"Suivez-moi"
+		"es"		"Síganme"
+		"de"		"Folgt mir"
+		"pt"		"Sigam-me"
+		"chi"		"跟我来"
 	}
 
 	"Toggle Beacon"
 	{
 		"en"		"Toggle Beacon"
 		"ru"		"Переключить маяк"
+		"fr"		"Activer/désactiver le beacon"
+		"es"		"Activar/desactivar baliza"
+		"de"		"Beacon an/aus"
+		"pt"		"Ativar/desativar sinalizador"
+		"chi"		"开关信标"
 	}
 	
 	"Toggle Trail"
 	{
 		"en"		"Toggle Trail"
 		"ru"		"Переключить след"
+		"fr"		"Activer/désactiver la traînée"
+		"es"		"Activar/desactivar estela"
+		"de"		"Trail an/aus"
+		"pt"		"Ativar/desativar rastro"
+		"chi"		"开关拖尾"
 	}
 
 	"Toggle Tracers"
 	{
 		"en"		"Toggle Tracers"
 		"ru"		"Переключить трассеры"
+		"fr"		"Activer/désactiver les traceurs"
+		"es"		"Activar/desactivar trazadoras"
+		"de"		"Tracer an/aus"
+		"pt"		"Ativar/desativar traçantes"
+		"chi"		"开关弹道轨迹"
 	}
 
 	"Place Marker"
 	{
 		"en"		"Place Marker"
 		"ru"		"Поставить маркер"
+		"fr"		"Placer un marqueur"
+		"es"		"Colocar marcador"
+		"de"		"Marker setzen"
+		"pt"		"Colocar marcador"
+		"chi"		"放置标记"
 	}
 
 	"Remove Marker"
 	{
 		"en"		"Remove Markers"
 		"ru"		"Убрать маркеры"
+		"fr"		"Retirer les marqueurs"
+		"es"		"Quitar marcadores"
+		"de"		"Marker entfernen"
+		"pt"		"Remover marcadores"
+		"chi"		"移除标记"
 	}
 
 	"Resign from Leader"
 	{
 		"en"		"Resign from Leader"
 		"ru"		"Отказаться от лидерства"
+		"fr"		"Quitter le rôle de leader"
+		"es"		"Dejar de ser líder"
+		"de"		"Als Leader zurücktreten"
+		"pt"		"Deixar de ser líder"
+		"chi"		"辞去指挥"
 	}
 
 	// Marker Menu
@@ -289,30 +509,55 @@
 	{
 		"en"		"Marker Menu"
 		"ru"		"Меню маркеров"
+		"fr"		"Menu des marqueurs"
+		"es"		"Menú de marcadores"
+		"de"		"Marker-Menü"
+		"pt"		"Menu de marcadores"
+		"chi"		"标记菜单"
 	}
 
 	"Arrow Marker"
 	{
 		"en"		"Arrow Marker"
 		"ru"		"Маркер-стрелка"
+		"fr"		"Marqueur flèche"
+		"es"		"Marcador de flecha"
+		"de"		"Pfeil-Marker"
+		"pt"		"Marcador de seta"
+		"chi"		"箭头标记"
 	}
 	
 	"ZM Teleport"
 	{
 		"en"		"ZM Teleport"
 		"ru"		"Телепорт зомби"
+		"fr"		"TP zombie"
+		"es"		"Teletransporte zombi"
+		"de"		"Zombie-Teleport"
+		"pt"		"Teleporte de zumbi"
+		"chi"		"僵尸传送点"
 	}
 
 	"No Doorhug"
 	{
 		"en"		"No Doorhug"
 		"ru"		"Не стоять у двери"
+		"fr"		"Pas de doorhug"
+		"es"		"No pegarse a la puerta"
+		"de"		"Kein Doorhug"
+		"pt"		"Não fique colado na porta"
+		"chi"		"禁止贴门"
 	}
 	
 	"Ping Marker"
 	{
 		"en"		"Ping a Location"
 		"ru"		"Отметить место"
+		"fr"		"Pinger un emplacement"
+		"es"		"Marcar una ubicación"
+		"de"		"Einen Ort pingen"
+		"pt"		"Marcar um local"
+		"chi"		"标点一个位置"
 	}
 
 	// Preference
@@ -320,67 +565,122 @@
 	{
 		"en"		"Client Settings"
 		"ru"		"Настройки клиента"
+		"fr"		"Paramètres du joueur"
+		"es"		"Configuración del jugador"
+		"de"		"Spielereinstellungen"
+		"pt"		"Configurações do jogador"
+		"chi"		"玩家设置"
 	}
 
 	"Shortcut"
 	{
 		"en"		"Shortcut Keys"
 		"ru"		"Шорткат"
+		"fr"		"Touches de raccourci"
+		"es"		"Teclas de acceso rápido"
+		"de"		"Schnelltasten"
+		"pt"		"Teclas de atalho"
+		"chi"		"快捷键"
 	}
 
 	"Marker Pos"
 	{
-		"en"		"Marker Postion"
+		"en"		"Marker Position"
 		"ru"		"Позиция маркера"
+		"fr"		"Position du marqueur"
+		"es"		"Posición del marcador"
+		"de"		"Marker-Position"
+		"pt"		"Posição do marcador"
+		"chi"		"标记放置位置"
 	}
 
 	"Ping Sound"
 	{
 		"en"		"Ping Sound"
 		"ru"		"Звук пинга"
+		"fr"		"Son du ping"
+		"es"		"Sonido de ping"
+		"de"		"Ping-Ton"
+		"pt"		"Som do ping"
+		"chi"		"标点音效"
 	}
 
 	"Enabled"
 	{
 		"en"		"Enabled"
 		"ru"		"Включено"
+		"fr"		"Activé"
+		"es"		"Activado"
+		"de"		"Aktiviert"
+		"pt"		"Ativado"
+		"chi"		"已启用"
 	}
 
 	"Disabled"
 	{
 		"en"		"Disabled"
 		"ru"		"Выключено"
+		"fr"		"Désactivé"
+		"es"		"Desactivado"
+		"de"		"Deaktiviert"
+		"pt"		"Desativado"
+		"chi"		"已禁用"
 	}
 
 	"Enabled Chat"
 	{
 		"en"		"{lime}Enabled"
 		"ru"		"{lime}Включено"
+		"fr"		"{lime}activé"
+		"es"		"{lime}activado"
+		"de"		"{lime}aktiviert"
+		"pt"		"{lime}ativado"
+		"chi"		"{lime}已启用"
 	}
 
 	"Disabled Chat"
 	{
 		"en"		"{red}Disabled"
 		"ru"		"{red}Выключено"
+		"fr"		"{red}désactivé"
+		"es"		"{red}desactivado"
+		"de"		"{red}deaktiviert"
+		"pt"		"{red}desativado"
+		"chi"		"{red}已禁用"
 	}
 
 	"Client Position"
 	{
 		"en"		"Client's Position"
 		"ru"		"Позиция клиента"
+		"fr"		"Position du joueur"
+		"es"		"Posición del jugador"
+		"de"		"Spielerposition"
+		"pt"		"Posição do jogador"
+		"chi"		"玩家位置"
 	}
 
 	"Client Crosshair"
 	{
 		"en"		"Client's Crosshair"
 		"ru"		"Позиция прицела"
+		"fr"		"Viseur du joueur"
+		"es"		"Mira del jugador"
+		"de"		"Fadenkreuz des Spielers"
+		"pt"		"Mira do jogador"
+		"chi"		"玩家准星"
 	}
 
 	"You set shortcut"
 	{
 		"#format"	"{1:s}"
 		"en"		"You have {1} {default}leader shortcut key."
-		"ru"		"У вас стоит кнопка {1} {default}как шорткат для лидер-меню."
+		"ru"		"Шорткат лидер-меню: {1}{default}."
+		"fr"		"Vous avez {1} {default}le raccourci du menu leader."
+		"es"		"Has {1} {default}el atajo del menú de líder."
+		"de"		"Du hast die Leader-Schnelltaste {1}{default}."
+		"pt"		"Atalho do menu de líder {1}{default}."
+		"chi"		"指挥菜单快捷键：{1}{default}。"
 	}
 
 	"You set pingsound"
@@ -388,17 +688,32 @@
 		"#format"	"{1:s}"
 		"en"		"Leader ping sound: {1}{default}."
 		"ru"		"Звук пинга лидера: {1}{default}."
+		"fr"		"Son du ping leader: {1}{default}."
+		"es"		"Sonido de ping del líder: {1}{default}."
+		"de"		"Leader-Ping-Ton: {1}{default}."
+		"pt"		"Som do ping do líder: {1}{default}."
+		"chi"		"指挥标点音效：{1}{default}。"
 	}
 
 	"Marker Pos Crosshair"
 	{
 		"en"		"You have set Marker to be set at {green}Your crosshair{default} position."
-		"ru"		"Теперь маркеры ставятся по положению {green}прицелу{default}."
+		"ru"		"Теперь маркеры ставятся по положению {green}прицела{default}."
+		"fr"		"Les marqueurs seront placés à la position de {green}votre viseur{default}."
+		"es"		"Los marcadores se colocarán en la posición de {green}tu mira{default}."
+		"de"		"Marker werden jetzt an der Position {green}deines Fadenkreuzes{default} gesetzt."
+		"pt"		"Os marcadores serão colocados na posição da {green}sua mira{default}."
+		"chi"		"标记将放置在{green}你的准星{default}所指位置。"
 	}
 
 	"Marker Pos Player Position"
 	{
 		"en"		"You have set Marker to be set at {green}Player's{default} position."
 		"ru"		"Теперь маркеры ставятся по положению {green}игрока{default}."
+		"fr"		"Les marqueurs seront placés à la position {green}du joueur{default}."
+		"es"		"Los marcadores se colocarán en la posición {green}del jugador{default}."
+		"de"		"Marker werden jetzt an der Position {green}des Spielers{default} gesetzt."
+		"pt"		"Os marcadores serão colocados na posição {green}do jogador{default}."
+		"chi"		"标记将放置在{green}玩家{default}所在位置。"
 	}
 }
