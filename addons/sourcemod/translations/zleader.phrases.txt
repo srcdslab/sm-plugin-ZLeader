@@ -383,6 +383,17 @@
 		"chi"		"指挥菜单"
 	}
 
+	"Active Marker"
+	{
+		"en"		"Active Marker:"
+		"ru"		"Активный маркер:"
+		"fr"		"Marqueur actif :"
+		"es"		"Marcador activo:"
+		"de"		"Aktiver Marker:"
+		"pt"		"Marcador ativo:"
+		"chi"		"当前标记："
+	}
+
 	"Menu Leader list title"
 	{
 		"en"		"Leader list menu"
@@ -715,5 +726,304 @@
 		"de"		"Marker werden jetzt an der Position {green}des Spielers{default} gesetzt."
 		"pt"		"Os marcadores serão colocados na posição {green}do jogador{default}."
 		"chi"		"标记将放置在{green}玩家{default}所在位置。"
+	}
+
+	// Leader Chat & Radio
+	"Leader Codename"
+	{
+		"#format"	"{1:s}"
+		"en"		"Leader {1}"
+		"ru"		"Лидер {1}"
+		"fr"		"Leader {1}"
+		"es"		"Líder {1}"
+		"de"		"Leader {1}"
+		"pt"		"Líder {1}"
+		"chi"		"指挥 {1}"
+	}
+
+	"Human Chat Prefix"
+	{
+		"en"		"(Human)"
+		"ru"		"(Люди)"
+		"fr"		"(Humain)"
+		"es"		"(Humano)"
+		"de"		"(Mensch)"
+		"pt"		"(Humano)"
+		"chi"		"（人类）"
+	}
+
+	"Radio"
+	{
+		"en"		"RADIO"
+		"ru"		"РАЦИЯ"
+		"fr"		"RADIO"
+		"es"		"RADIO"
+		"de"		"FUNK"
+		"pt"		"RÁDIO"
+		"chi"		"无线电"
+	}
+
+	"Radio compliment"
+	{
+		"en"		"Nice!"
+		"ru"		"Отлично!"
+		"fr"		"Bien joué !"
+		"es"		"¡Bien hecho!"
+		"de"		"Gut gemacht!"
+		"pt"		"Boa!"
+		"chi"		"干得漂亮！"
+	}
+
+	"Radio coverme"
+	{
+		"en"		"Cover Me!"
+		"ru"		"Прикройте меня!"
+		"fr"		"Couvrez-moi !"
+		"es"		"¡Cúbranme!"
+		"de"		"Gebt mir Deckung!"
+		"pt"		"Me deem cobertura!"
+		"chi"		"掩护我！"
+	}
+
+	"Radio cheer"
+	{
+		"en"		"Cheer!"
+		"ru"		"Ура!"
+		"fr"		"Hourra !"
+		"es"		"¡Hurra!"
+		"de"		"Hurra!"
+		"pt"		"Viva!"
+		"chi"		"欢呼！"
+	}
+
+	"Radio takepoint"
+	{
+		"en"		"You take the point."
+		"ru"		"Иди первым."
+		"fr"		"Prenez la tête."
+		"es"		"Tú vas al frente."
+		"de"		"Du übernimmst die Spitze."
+		"pt"		"Você vai na frente."
+		"chi"		"你打头阵。"
+	}
+
+	"Radio holdpos"
+	{
+		"en"		"Hold This Position."
+		"ru"		"Удерживайте эту позицию."
+		"fr"		"Tenez cette position."
+		"es"		"Mantengan esta posición."
+		"de"		"Haltet diese Position."
+		"pt"		"Segurem esta posição."
+		"chi"		"守住这个位置。"
+	}
+
+	"Radio regroup"
+	{
+		"en"		"Regroup Team."
+		"ru"		"Команда, перегруппироваться."
+		"fr"		"Équipe, regroupez-vous."
+		"es"		"Equipo, reagrúpense."
+		"de"		"Team, sammeln."
+		"pt"		"Equipe, reagrupar."
+		"chi"		"全队重新集结。"
+	}
+
+	"Radio followme"
+	{
+		"en"		"Follow me."
+		"ru"		"За мной."
+		"fr"		"Suivez-moi."
+		"es"		"Síganme."
+		"de"		"Folgt mir."
+		"pt"		"Sigam-me."
+		"chi"		"跟我来。"
+	}
+
+	"Radio takingfire"
+	{
+		"en"		"Taking fire... need assistance!"
+		"ru"		"Под обстрелом... нужна помощь!"
+		"fr"		"Je suis sous le feu... besoin d'aide !"
+		"es"		"Estoy bajo fuego... ¡necesito ayuda!"
+		"de"		"Stehe unter Beschuss... brauche Hilfe!"
+		"pt"		"Sob fogo... preciso de ajuda!"
+		"chi"		"遭到攻击……需要支援！"
+	}
+
+	"Radio thanks"
+	{
+		"en"		"Thanks!"
+		"ru"		"Спасибо!"
+		"fr"		"Merci !"
+		"es"		"¡Gracias!"
+		"de"		"Danke!"
+		"pt"		"Valeu!"
+		"chi"		"谢谢！"
+	}
+
+	"Radio go"
+	{
+		"en"		"Go go go!"
+		"ru"		"Вперёд, вперёд, вперёд!"
+		"fr"		"Go go go !"
+		"es"		"¡Vamos, vamos, vamos!"
+		"de"		"Los, los, los!"
+		"pt"		"Vai, vai, vai!"
+		"chi"		"冲冲冲！"
+	}
+
+	"Radio fallback"
+	{
+		"en"		"Team, fall back!"
+		"ru"		"Команда, отступаем!"
+		"fr"		"Équipe, repliez-vous !"
+		"es"		"¡Equipo, retirada!"
+		"de"		"Team, zurückziehen!"
+		"pt"		"Equipe, recuar!"
+		"chi"		"全队后撤！"
+	}
+
+	"Radio sticktog"
+	{
+		"en"		"Stick together, team."
+		"ru"		"Команда, держимся вместе."
+		"fr"		"Équipe, restez groupés."
+		"es"		"Equipo, manténganse juntos."
+		"de"		"Team, bleibt zusammen."
+		"pt"		"Equipe, fiquem juntos."
+		"chi"		"全队保持集合。"
+	}
+
+	"Radio getinpos"
+	{
+		"en"		"Get in position and wait for my go!"
+		"ru"		"Займите позиции и ждите моего сигнала!"
+		"fr"		"Mettez-vous en position et attendez mon signal !"
+		"es"		"¡Tomen posiciones y esperen mi señal!"
+		"de"		"Geht in Position und wartet auf mein Zeichen!"
+		"pt"		"Fiquem em posição e esperem meu sinal!"
+		"chi"		"各就各位，等我命令！"
+	}
+
+	"Radio stormfront"
+	{
+		"en"		"Storm the front!"
+		"ru"		"Штурмуем!"
+		"fr"		"À l'assaut !"
+		"es"		"¡Al ataque!"
+		"de"		"Stürmt nach vorne!"
+		"pt"		"Avancem com tudo!"
+		"chi"		"冲锋！"
+	}
+
+	"Radio report"
+	{
+		"en"		"Report in, team."
+		"ru"		"Команда, доложите обстановку."
+		"fr"		"Équipe, au rapport."
+		"es"		"Equipo, reporten."
+		"de"		"Team, Meldung machen."
+		"pt"		"Equipe, reportem."
+		"chi"		"全队报告情况。"
+	}
+
+	"Radio roger"
+	{
+		"en"		"Roger that."
+		"ru"		"Вас понял."
+		"fr"		"Bien reçu."
+		"es"		"Recibido."
+		"de"		"Verstanden."
+		"pt"		"Entendido."
+		"chi"		"收到。"
+	}
+
+	"Radio enemyspot"
+	{
+		"en"		"Enemy spotted."
+		"ru"		"Враг обнаружен."
+		"fr"		"Ennemi repéré."
+		"es"		"Enemigo avistado."
+		"de"		"Feind gesichtet."
+		"pt"		"Inimigo avistado."
+		"chi"		"发现敌人。"
+	}
+
+	"Radio needbackup"
+	{
+		"en"		"Need backup."
+		"ru"		"Нужна поддержка."
+		"fr"		"Besoin de renforts."
+		"es"		"Necesito refuerzos."
+		"de"		"Brauche Verstärkung."
+		"pt"		"Preciso de reforço."
+		"chi"		"需要支援。"
+	}
+
+	"Radio sectorclear"
+	{
+		"en"		"Sector clear."
+		"ru"		"Сектор чист."
+		"fr"		"Secteur sécurisé."
+		"es"		"Sector despejado."
+		"de"		"Sektor gesichert."
+		"pt"		"Setor limpo."
+		"chi"		"区域安全。"
+	}
+
+	"Radio inposition"
+	{
+		"en"		"I'm in position."
+		"ru"		"Я на позиции."
+		"fr"		"Je suis en position."
+		"es"		"Estoy en posición."
+		"de"		"Bin in Position."
+		"pt"		"Estou em posição."
+		"chi"		"我已就位。"
+	}
+
+	"Radio reportingin"
+	{
+		"en"		"Reporting In."
+		"ru"		"Докладываю."
+		"fr"		"Au rapport."
+		"es"		"Reportándome."
+		"de"		"Melde mich."
+		"pt"		"Reportando."
+		"chi"		"报告。"
+	}
+
+	"Radio getout"
+	{
+		"en"		"Get out of there, it's gonna blow!"
+		"ru"		"Уходите оттуда, сейчас рванёт!"
+		"fr"		"Sortez de là, ça va exploser !"
+		"es"		"¡Salgan de ahí, va a explotar!"
+		"de"		"Raus da, das fliegt gleich in die Luft!"
+		"pt"		"Saiam daí, vai explodir!"
+		"chi"		"快离开那里，要爆炸了！"
+	}
+
+	"Radio negative"
+	{
+		"en"		"Negative."
+		"ru"		"Никак нет."
+		"fr"		"Négatif."
+		"es"		"Negativo."
+		"de"		"Negativ."
+		"pt"		"Negativo."
+		"chi"		"否定。"
+	}
+
+	"Radio enemydown"
+	{
+		"en"		"Enemy down."
+		"ru"		"Враг уничтожен."
+		"fr"		"Ennemi à terre."
+		"es"		"Enemigo abatido."
+		"de"		"Feind erledigt."
+		"pt"		"Inimigo abatido."
+		"chi"		"敌人已被击倒。"
 	}
 }
