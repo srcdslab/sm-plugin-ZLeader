@@ -839,7 +839,7 @@ public Action Command_Leader(int client, int args) {
 
 	if (args == 0) {
 		if (client <= 0 || !IsClientInGame(client)) {
-			ReplyToCommand(client, "%T %T", "Prefix", client, "Command is in-game only", client);
+			CReplyToCommand(client, "%T %T", "Prefix", client, "Command is in-game only", client);
 			return Plugin_Handled;
 		}
 
@@ -973,10 +973,10 @@ public void LeaderMenu(int client) {
 
 			char sName[64];
 			switch (type) {
-				case MK_NORMAL: FormatEx(sName, sizeof(sName), "%t", "Arrow Marker");
-				case MK_DEFEND: FormatEx(sName, sizeof(sName), "%t", "Defend Here");
-				case MK_ZMTP:   FormatEx(sName, sizeof(sName), "%t", "ZM Teleport");
-				case MK_NOHUG:  FormatEx(sName, sizeof(sName), "%t", "No Doorhug");
+				case MK_NORMAL: FormatEx(sName, sizeof(sName), "%T", "Arrow Marker", client);
+				case MK_DEFEND: FormatEx(sName, sizeof(sName), "%T", "Defend Here", client);
+				case MK_ZMTP:   FormatEx(sName, sizeof(sName), "%T", "ZM Teleport", client);
+				case MK_NOHUG:  FormatEx(sName, sizeof(sName), "%T", "No Doorhug", client);
 			}
 
 			if (iActive++)
@@ -986,7 +986,7 @@ public void LeaderMenu(int client) {
 		}
 
 		if (iActive)
-			menu.SetTitle("%T \nActive Marker:\n→ %s", "Menu Leader title", client, sActive);
+			menu.SetTitle("%T \n%T\n→ %s", "Menu Leader title", client, "Active Marker", client, sActive);
 		else
 			menu.SetTitle("%T", "Menu Leader title", client);
 	} else
@@ -1157,7 +1157,7 @@ public int CurrentLeaderMenuHandler(Menu menu, MenuAction action, int param1, in
 ============================================================================ */
 public Action Command_VoteLeader(int client, int args) {
 	if (client <= 0) {
-		ReplyToCommand(client, "%T %T", "Prefix", client, "Command is in-game only", client);
+		CReplyToCommand(client, "%T %T", "Prefix", client, "Command is in-game only", client);
 		return Plugin_Handled;
 	}
 	int count = 0;
@@ -2156,24 +2156,21 @@ static Action HandleLeaderChat(int client, bool isSayTeam) {
 	char codename[32], szMessage[512];
 	GetLeaderCodename(g_iClientLeaderSlot[client], codename, sizeof(codename));
 
-	char prefix[16];
-	FormatEx(prefix, sizeof(prefix), isSayTeam ? "(Human) " : "");
-
 	if (g_bPlugin_ccc) {
-		FormatEx(szMessage, sizeof(szMessage), "%s{darkred}[{orange}Leader %s{darkred}] {%s}%N {default}: {%s}%s",
-			prefix, codename, g_sColorName[client], client, g_sColorChat[client], LeaderText);
+		FormatEx(szMessage, sizeof(szMessage), "{%s}%N {default}: {%s}%s",
+			g_sColorName[client], client, g_sColorChat[client], LeaderText);
 	} else {
-		FormatEx(szMessage, sizeof(szMessage), "%s{darkred}[{orange}Leader %s{darkred}] {teamcolor}%N {default}: {default}%s",
-			prefix, codename, client, LeaderText);
+		FormatEx(szMessage, sizeof(szMessage), "{teamcolor}%N {default}: {default}%s",
+			client, LeaderText);
 	}
 
 	if (isSayTeam) {
 		for (int i = 1; i <= MaxClients; i++) {
 			if (IsClientInGame(i) && GetClientTeam(i) == CS_TEAM_CT)
-				CPrintToChat(i, "%s", szMessage);
+				CPrintToChat(i, "%t {darkred}[{orange}%t{darkred}] %s", "Human Chat Prefix", "Leader Codename", codename, szMessage);
 		}
 	} else {
-		CPrintToChatAll("%s", szMessage);
+		CPrintToChatAll("{darkred}[{orange}%t{darkred}] %s", "Leader Codename", codename, szMessage);
 	}
 
 	return Plugin_Handled;
@@ -2233,45 +2230,45 @@ void HookRadio() {
 
 public Action Radio(int client, const char[] command, int argc) {
 	if (IsClientLeader(client)) {
-		if (strcmp(command, "compliment", false) == 0) PrintRadio(client, "Nice!");
-		if (strcmp(command, "coverme", false) == 0) PrintRadio(client, "Cover Me!");
-		if (strcmp(command, "cheer", false) == 0) PrintRadio(client, "Cheer!");
-		if (strcmp(command, "takepoint", false) == 0) PrintRadio(client, "You take the point.");
-		if (strcmp(command, "holdpos", false) == 0) PrintRadio(client, "Hold This Position.");
-		if (strcmp(command, "regroup", false) == 0) PrintRadio(client, "Regroup Team.");
-		if (strcmp(command, "followme", false) == 0) PrintRadio(client, "Follow me.");
-		if (strcmp(command, "takingfire", false) == 0) PrintRadio(client, "Taking fire... need assistance!");
-		if (strcmp(command, "thanks", false) == 0) PrintRadio(client, "Thanks!");
-		if (strcmp(command, "go", false) == 0) PrintRadio(client, "Go go go!");
-		if (strcmp(command, "fallback", false) == 0) PrintRadio(client, "Team, fall back!");
-		if (strcmp(command, "sticktog", false) == 0) PrintRadio(client, "Stick together, team.");
-		if (strcmp(command, "getinpos", false) == 0) PrintRadio(client, "Get in position and wait for my go!");
-		if (strcmp(command, "stormfront", false) == 0) PrintRadio(client, "Storm the front!");
-		if (strcmp(command, "report", false) == 0) PrintRadio(client, "Report in, team.");
-		if (strcmp(command, "roger", false) == 0) PrintRadio(client, "Roger that.");
-		if (strcmp(command, "enemyspot", false) == 0) PrintRadio(client, "Enemy spotted.");
-		if (strcmp(command, "needbackup", false) == 0) PrintRadio(client, "Need backup.");
-		if (strcmp(command, "sectorclear", false) == 0) PrintRadio(client, "Sector clear.");
-		if (strcmp(command, "inposition", false) == 0) PrintRadio(client, "I'm in position.");
-		if (strcmp(command, "reportingin", false) == 0) PrintRadio(client, "Reporting In.");
-		if (strcmp(command, "getout", false) == 0) PrintRadio(client, "Get out of there, it's gonna blow!.");
-		if (strcmp(command, "negative", false) == 0) PrintRadio(client, "Negative.");
-		if (strcmp(command, "enemydown", false) == 0) PrintRadio(client, "Enemy down.");
+		if (strcmp(command, "compliment", false) == 0) PrintRadio(client, "Radio compliment");
+		if (strcmp(command, "coverme", false) == 0) PrintRadio(client, "Radio coverme");
+		if (strcmp(command, "cheer", false) == 0) PrintRadio(client, "Radio cheer");
+		if (strcmp(command, "takepoint", false) == 0) PrintRadio(client, "Radio takepoint");
+		if (strcmp(command, "holdpos", false) == 0) PrintRadio(client, "Radio holdpos");
+		if (strcmp(command, "regroup", false) == 0) PrintRadio(client, "Radio regroup");
+		if (strcmp(command, "followme", false) == 0) PrintRadio(client, "Radio followme");
+		if (strcmp(command, "takingfire", false) == 0) PrintRadio(client, "Radio takingfire");
+		if (strcmp(command, "thanks", false) == 0) PrintRadio(client, "Radio thanks");
+		if (strcmp(command, "go", false) == 0) PrintRadio(client, "Radio go");
+		if (strcmp(command, "fallback", false) == 0) PrintRadio(client, "Radio fallback");
+		if (strcmp(command, "sticktog", false) == 0) PrintRadio(client, "Radio sticktog");
+		if (strcmp(command, "getinpos", false) == 0) PrintRadio(client, "Radio getinpos");
+		if (strcmp(command, "stormfront", false) == 0) PrintRadio(client, "Radio stormfront");
+		if (strcmp(command, "report", false) == 0) PrintRadio(client, "Radio report");
+		if (strcmp(command, "roger", false) == 0) PrintRadio(client, "Radio roger");
+		if (strcmp(command, "enemyspot", false) == 0) PrintRadio(client, "Radio enemyspot");
+		if (strcmp(command, "needbackup", false) == 0) PrintRadio(client, "Radio needbackup");
+		if (strcmp(command, "sectorclear", false) == 0) PrintRadio(client, "Radio sectorclear");
+		if (strcmp(command, "inposition", false) == 0) PrintRadio(client, "Radio inposition");
+		if (strcmp(command, "reportingin", false) == 0) PrintRadio(client, "Radio reportingin");
+		if (strcmp(command, "getout", false) == 0) PrintRadio(client, "Radio getout");
+		if (strcmp(command, "negative", false) == 0) PrintRadio(client, "Radio negative");
+		if (strcmp(command, "enemydown", false) == 0) PrintRadio(client, "Radio enemydown");
 
 		return Plugin_Stop;
 	}
 	return Plugin_Continue;
 }
 
+// text is the phrase key of the radio message
 public void PrintRadio(int client, const char[] text) {
-	char szMessage[255], codename[32];
+	char codename[32];
 
 	if (IsClientLeader(client)) {
 		GetLeaderCodename(g_iClientLeaderSlot[client], codename, sizeof(codename));
-		FormatEx(szMessage, sizeof(szMessage), "{darkred}[{orange}Leader %s{darkred}] {blue}%N {default}(RADIO): %s", codename, client, text);
 		for (int i = 1; i <= MaxClients; i++) {
 			if (IsClientInGame(i) && IsPlayerAlive(i) && GetClientTeam(i) == CS_TEAM_CT)
-				CPrintToChat(i, "%s", szMessage);
+				CPrintToChat(i, "{darkred}[{orange}%t{darkred}] {blue}%N {default}(%t): %t", "Leader Codename", codename, client, "Radio", text);
 		}
 	}
 }
@@ -2282,7 +2279,7 @@ public void PrintRadio(int client, const char[] text) {
 void SetClientLeader(int client, int adminset = -1, int slot) {
 	if (!IsClientInGame(client)) {
 		if (adminset != -1)
-			CReplyToCommand(adminset, "%T %T", "Prefix", client, "Invalid client", client);
+			CReplyToCommand(adminset, "%t %t", "Prefix", "Invalid client");
 
 		return;
 	}
