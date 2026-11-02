@@ -89,15 +89,11 @@ char g_sTrailPosition[64],
 char g_sMarkerTypes[MK_TOTAL][32] = { "MK_NORMAL", "MK_DEFEND", "MK_ZMTP", "MK_NOHUG", "MK_PING" };
 char g_sEntityTypes[ENTITIES_PER_MK][32] = { "prop_dynamic", "light_dynamic", "env_sprite" };
 
+// Radio commands relayed to the CTs; each message is the phrase "Radio <command>"
 char g_sRadioCommands[][] = {
 	"compliment", "coverme", "cheer", "takepoint", "holdpos", "regroup", "followme", "takingfire",
 	"thanks", "go", "fallback", "sticktog", "getinpos", "stormfront", "report", "roger",
 	"enemyspot", "needbackup", "sectorclear", "inposition", "reportingin", "getout", "negative", "enemydown"
-};
-char g_sRadioMessages[][] = {
-	"Nice!", "Cover Me!", "Cheer!", "You take the point.", "Hold This Position.", "Regroup Team.", "Follow me.", "Taking fire... need assistance!",
-	"Thanks!", "Go go go!", "Team, fall back!", "Stick together, team.", "Get in position and wait for my go!", "Storm the front!", "Report in, team.", "Roger that.",
-	"Enemy spotted.", "Need backup.", "Sector clear.", "I'm in position.", "Reporting In.", "Get out of there, it's gonna blow!.", "Negative.", "Enemy down."
 };
 
 float g_fPingPos[MAXPLAYERS + 1][3],
@@ -848,7 +844,7 @@ public Action Command_Leader(int client, int args) {
 
 	if (args == 0) {
 		if (client <= 0 || !IsClientInGame(client)) {
-			ReplyToCommand(client, "%T %T", "Prefix", client, "Command is in-game only", client);
+			CReplyToCommand(client, "%T %T", "Prefix", client, "Command is in-game only", client);
 			return Plugin_Handled;
 		}
 
@@ -982,10 +978,10 @@ public void LeaderMenu(int client) {
 
 			char sName[64];
 			switch (type) {
-				case MK_NORMAL: FormatEx(sName, sizeof(sName), "%t", "Arrow Marker");
-				case MK_DEFEND: FormatEx(sName, sizeof(sName), "%t", "Defend Here");
-				case MK_ZMTP:   FormatEx(sName, sizeof(sName), "%t", "ZM Teleport");
-				case MK_NOHUG:  FormatEx(sName, sizeof(sName), "%t", "No Doorhug");
+				case MK_NORMAL: FormatEx(sName, sizeof(sName), "%T", "Arrow Marker", client);
+				case MK_DEFEND: FormatEx(sName, sizeof(sName), "%T", "Defend Here", client);
+				case MK_ZMTP:   FormatEx(sName, sizeof(sName), "%T", "ZM Teleport", client);
+				case MK_NOHUG:  FormatEx(sName, sizeof(sName), "%T", "No Doorhug", client);
 			}
 
 			if (iActive++)
@@ -995,7 +991,7 @@ public void LeaderMenu(int client) {
 		}
 
 		if (iActive)
-			menu.SetTitle("%T \nActive Marker:\n→ %s", "Menu Leader title", client, sActive);
+			menu.SetTitle("%T \n%T\n→ %s", "Menu Leader title", client, "Active Marker", client, sActive);
 		else
 			menu.SetTitle("%T", "Menu Leader title", client);
 	} else
@@ -1171,7 +1167,7 @@ public int CurrentLeaderMenuHandler(Menu menu, MenuAction action, int param1, in
 ============================================================================ */
 public Action Command_VoteLeader(int client, int args) {
 	if (client <= 0) {
-		ReplyToCommand(client, "%T %T", "Prefix", client, "Command is in-game only", client);
+		CReplyToCommand(client, "%T %T", "Prefix", client, "Command is in-game only", client);
 		return Plugin_Handled;
 	}
 	if (GetLeaderFreeSlot() == -1) {
@@ -2141,24 +2137,21 @@ static Action HandleLeaderChat(int client, bool isSayTeam) {
 	char codename[32], szMessage[512];
 	GetLeaderCodename(g_iClientLeaderSlot[client], codename, sizeof(codename));
 
-	char prefix[16];
-	FormatEx(prefix, sizeof(prefix), isSayTeam ? "(Human) " : "");
-
 	if (g_bPlugin_ccc) {
-		FormatEx(szMessage, sizeof(szMessage), "%s{darkred}[{orange}Leader %s{darkred}] {%s}%N {default}: {%s}%s",
-			prefix, codename, g_sColorName[client], client, g_sColorChat[client], LeaderText);
+		FormatEx(szMessage, sizeof(szMessage), "{%s}%N {default}: {%s}%s",
+			g_sColorName[client], client, g_sColorChat[client], LeaderText);
 	} else {
-		FormatEx(szMessage, sizeof(szMessage), "%s{darkred}[{orange}Leader %s{darkred}] {teamcolor}%N {default}: {default}%s",
-			prefix, codename, client, LeaderText);
+		FormatEx(szMessage, sizeof(szMessage), "{teamcolor}%N {default}: {default}%s",
+			client, LeaderText);
 	}
 
 	if (isSayTeam) {
 		for (int i = 1; i <= MaxClients; i++) {
 			if (IsClientInGame(i) && GetClientTeam(i) == CS_TEAM_CT)
-				CPrintToChat(i, "%s", szMessage);
+				CPrintToChat(i, "%t {darkred}[{orange}%t{darkred}] %s", "Human Chat Prefix", "Leader Codename", codename, szMessage);
 		}
 	} else {
-		CPrintToChatAll("%s", szMessage);
+		CPrintToChatAll("{darkred}[{orange}%t{darkred}] %s", "Leader Codename", codename, szMessage);
 	}
 
 	return Plugin_Handled;
@@ -2200,7 +2193,9 @@ public Action Radio(int client, const char[] command, int argc) {
 
 	for (int i = 0; i < sizeof(g_sRadioCommands); i++) {
 		if (strcmp(command, g_sRadioCommands[i], false) == 0) {
-			PrintRadio(client, g_sRadioMessages[i]);
+			char sPhrase[32];
+			FormatEx(sPhrase, sizeof(sPhrase), "Radio %s", g_sRadioCommands[i]);
+			PrintRadio(client, sPhrase);
 			break;
 		}
 	}
@@ -2208,15 +2203,15 @@ public Action Radio(int client, const char[] command, int argc) {
 	return Plugin_Stop;
 }
 
+// text is the phrase key of the radio message
 public void PrintRadio(int client, const char[] text) {
-	char szMessage[255], codename[32];
+	char codename[32];
 
 	if (IsClientLeader(client)) {
 		GetLeaderCodename(g_iClientLeaderSlot[client], codename, sizeof(codename));
-		FormatEx(szMessage, sizeof(szMessage), "{darkred}[{orange}Leader %s{darkred}] {blue}%N {default}(RADIO): %s", codename, client, text);
 		for (int i = 1; i <= MaxClients; i++) {
 			if (IsClientInGame(i) && IsPlayerAlive(i) && GetClientTeam(i) == CS_TEAM_CT)
-				CPrintToChat(i, "%s", szMessage);
+				CPrintToChat(i, "{darkred}[{orange}%t{darkred}] {blue}%N {default}(%t): %t", "Leader Codename", codename, client, "Radio", text);
 		}
 	}
 }
