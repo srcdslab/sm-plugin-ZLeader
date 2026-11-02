@@ -240,7 +240,6 @@ public void OnPluginStart() {
 	AddCommandListener(QuickMarkerMenuCommand, "-lookatweapon");
 
 	/* HOOK EVENTS & RADIO */
-	AddTempEntHook("Player Decal", HookDecal);
 	HookEvent("player_team", OnPlayerTeam, EventHookMode_Post);
 	HookEvent("player_death", OnPlayerDeath, EventHookMode_Post);
 	HookEvent("round_end", OnRoundEnd);
@@ -1198,6 +1197,11 @@ public Action Command_VoteLeader(int client, int args) {
 		return Plugin_Handled;
 
 	int target = iTargets[0];
+
+	if (target == client) {
+		CReplyToCommand(client, "%T %T", "Prefix", client, "Cannot vote yourself", client);
+		return Plugin_Handled;
+	}
 
 	if (g_iClientNextVote[client] > GetTime())
 	{
@@ -2400,14 +2404,6 @@ public Action OnPlayerRunCmd(int client, int &buttons, int &impulse) {
 		QuickLeaderCommand(client);
 	g_bAttack3Held[client] = bAttack3;
 
-	return Plugin_Continue;
-}
-
-// Spray : Ping shortcut
-public Action HookDecal(const char[] sTEName, const int[] iClients, int iNumClients, float fSendDelay) {
-	int client = TE_ReadNum("m_nPlayer");
-	if (client > 0 && client <= MaxClients && g_bClientLeader[client])
-		RequestFrame(QuickPingCommand, client);
 	return Plugin_Continue;
 }
 
