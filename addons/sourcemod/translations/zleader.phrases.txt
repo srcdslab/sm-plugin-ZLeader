@@ -79,6 +79,17 @@
 		"chi"		"用法：sm_removeleader <玩家>"
 	}
 
+	"Cannot vote yourself"
+	{
+		"en"		"You can't vote for yourself!"
+		"ru"		"Нельзя голосовать за себя!"
+		"fr"		"Vous ne pouvez pas voter pour vous-même !"
+		"es"		"¡No puedes votar por ti mismo!"
+		"de"		"Du kannst nicht für dich selbst stimmen!"
+		"pt"		"Você não pode votar em si mesmo!"
+		"chi"		"你不能给自己投票！"
+	}
+
 	"Already vote client"
 	{
 		"en"		"You have already voted for this player!"
