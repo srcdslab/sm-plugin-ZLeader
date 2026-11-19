@@ -10,6 +10,12 @@
 		"de"		"{green}[ZLeader]{default}"
 		"pt"		"{green}[ZLeader]{default}"
 		"chi"		"{green}[ZLeader]{default}"
+		"pl"		"{green}[ZLeader]{default}"
+		"tr"		"{green}[ZLeader]{default}"
+		"it"		"{green}[ZLeader]{default}"
+		"ua"		"{green}[ZLeader]{default}"
+		"zho"		"{green}[ZLeader]{default}"
+		"cze"		"{green}[ZLeader]{default}"
 	}
 	
 	"Request Access"
@@ -21,6 +27,12 @@
 		"de"		"Du musst Leader-Zugang beantragen!"
 		"pt"		"Você precisa solicitar acesso de líder!"
 		"chi"		"你需要申请指挥权限！"
+		"pl"		"Musisz poprosić o dostęp lidera!"
+		"tr"		"Lider erişimi talep etmen gerekiyor!"
+		"it"		"Devi richiedere l'accesso da leader!"
+		"ua"		"Вам потрібно запросити доступ лідера!"
+		"zho"		"你需要申请队长权限！"
+		"cze"		"Musíš požádat o přístup vedoucího!"
 	}
 
 	"Slot is full"
@@ -32,6 +44,12 @@
 		"de"		"Alle Leader-Slots sind belegt!"
 		"pt"		"Todas as vagas de líder estão ocupadas!"
 		"chi"		"所有指挥位都已满！"
+		"pl"		"Wszystkie miejsca liderów są zajęte!"
+		"tr"		"Tüm lider slotları dolu!"
+		"it"		"Tutti gli slot leader sono occupati!"
+		"ua"		"Усі слоти лідерів зайняті!"
+		"zho"		"所有隊長名額都已滿！"
+		"cze"		"Všechny sloty vedoucích jsou obsazené!"
 	}
 
 	"You set client leader"
@@ -44,6 +62,12 @@
 		"de"		"Du hast {lime}{1}{default} zum Leader gemacht."
 		"pt"		"Você definiu {lime}{1}{default} como líder."
 		"chi"		"你已将 {lime}{1}{default} 设为指挥。"
+		"pl"		"Ustawiłeś lidera: {lime}{1}{default}."
+		"tr"		"{lime}{1}{default} oyuncusunu lider yaptın."
+		"it"		"Hai nominato leader {lime}{1}{default}."
+		"ua"		"Ви призначили лідером {lime}{1}{default}."
+		"zho"		"你已將 {lime}{1}{default} 設為隊長。"
+		"cze"		"Nastavil jsi vedoucího: {lime}{1}{default}."
 	}
 	
 	"Leader usage"
@@ -55,6 +79,12 @@
 		"de"		"Verwendung: sm_leader <Spieler>"
 		"pt"		"Uso: sm_leader <jogador>"
 		"chi"		"用法：sm_leader <玩家>"
+		"pl"		"Użycie: sm_leader <gracz>"
+		"tr"		"Kullanım: sm_leader <oyuncu>"
+		"it"		"Uso: sm_leader <giocatore>"
+		"ua"		"Використання: sm_leader <гравець>"
+		"zho"		"用法：sm_leader <玩家>"
+		"cze"		"Použití: sm_leader <hráč>"
 	}
 
 	"Vote leader usage"
@@ -66,6 +96,12 @@
 		"de"		"Verwendung: sm_voteleader <Spieler>"
 		"pt"		"Uso: sm_voteleader <jogador>"
 		"chi"		"用法：sm_voteleader <玩家>"
+		"pl"		"Użycie: sm_voteleader <gracz>"
+		"tr"		"Kullanım: sm_voteleader <oyuncu>"
+		"it"		"Uso: sm_voteleader <giocatore>"
+		"ua"		"Використання: sm_voteleader <гравець>"
+		"zho"		"用法：sm_voteleader <玩家>"
+		"cze"		"Použití: sm_voteleader <hráč>"
 	}
 	
 	"Remove leader usage"
@@ -77,6 +113,12 @@
 		"de"		"Verwendung: sm_removeleader <Spieler>"
 		"pt"		"Uso: sm_removeleader <jogador>"
 		"chi"		"用法：sm_removeleader <玩家>"
+		"pl"		"Użycie: sm_removeleader <gracz>"
+		"tr"		"Kullanım: sm_removeleader <oyuncu>"
+		"it"		"Uso: sm_removeleader <giocatore>"
+		"ua"		"Використання: sm_removeleader <гравець>"
+		"zho"		"用法：sm_removeleader <玩家>"
+		"cze"		"Použití: sm_removeleader <hráč>"
 	}
 
 	"Cannot vote yourself"
@@ -88,6 +130,12 @@
 		"de"		"Du kannst nicht für dich selbst stimmen!"
 		"pt"		"Você não pode votar em si mesmo!"
 		"chi"		"你不能给自己投票！"
+		"pl"		"Nie możesz głosować na siebie!"
+		"tr"		"Kendine oy veremezsin!"
+		"it"		"Non puoi votare per te stesso!"
+		"ua"		"Ви не можете голосувати за себе!"
+		"zho"		"你不能投給自己！"
+		"cze"		"Nemůžeš hlasovat sám pro sebe!"
 	}
 
 	"Already vote client"
@@ -99,6 +147,12 @@
 		"de"		"Du hast bereits für diesen Spieler gestimmt!"
 		"pt"		"Você já votou neste jogador!"
 		"chi"		"你已经投票给这名玩家了！"
+		"pl"		"Już zagłosowałeś na tego gracza!"
+		"tr"		"Bu oyuncuya zaten oy verdin!"
+		"it"		"Hai già votato per questo giocatore!"
+		"ua"		"Ви вже проголосували за цього гравця!"
+		"zho"		"你已經投票給這名玩家了！"
+		"cze"		"Pro tohoto hráče jsi už hlasoval!"
 	}
 
 	"Already Leader"
@@ -111,6 +165,12 @@
 		"de"		"{lightblue}{1}{default} ist bereits Leader!"
 		"pt"		"{lightblue}{1}{default} já é líder!"
 		"chi"		"{lightblue}{1}{default} 已经是指挥了！"
+		"pl"		"{lightblue}{1}{default} jest już liderem!"
+		"tr"		"{lightblue}{1}{default} zaten lider!"
+		"it"		"{lightblue}{1}{default} è già leader!"
+		"ua"		"{lightblue}{1}{default} вже лідер!"
+		"zho"		"{lightblue}{1}{default} 已經是隊長了！"
+		"cze"		"{lightblue}{1}{default} už je vedoucí!"
 	}
 
 	"Has to be human"
@@ -122,6 +182,12 @@
 		"de"		"Du musst für einen Menschen stimmen!"
 		"pt"		"Você precisa votar em um humano!"
 		"chi"		"你只能投票给人类！"
+		"pl"		"Musisz głosować na człowieka!"
+		"tr"		"Bir insana oy vermelisin!"
+		"it"		"Devi votare per un umano!"
+		"ua"		"Ви маєте голосувати за людину!"
+		"zho"		"你必須投給人類！"
+		"cze"		"Musíš hlasovat pro člověka!"
 	}
 
 	"It's Zombie"
@@ -133,6 +199,12 @@
 		"de"		"Der Leader muss ein lebender Mensch sein!"
 		"pt"		"O líder precisa ser um humano vivo!"
 		"chi"		"指挥必须是存活的人类！"
+		"pl"		"Lider musi być żywym człowiekiem!"
+		"tr"		"Lider hayattaki bir insan olmalı!"
+		"it"		"Il leader deve essere un umano vivo!"
+		"ua"		"Лідер має бути живою людиною!"
+		"zho"		"隊長必須是存活的人類！"
+		"cze"		"Vedoucí musí být živý člověk!"
 	}
 
 	"Leader should not be muted"
@@ -144,6 +216,12 @@
 		"de"		"Der Leader darf keine aktive Kommunikationssperre haben!"
 		"pt"		"O líder não pode ter uma punição de comunicação ativa!"
 		"chi"		"指挥不能处于禁言或禁麦状态！"
+		"pl"		"Lider nie może mieć aktywnej kary komunikacyjnej!"
+		"tr"		"Liderin aktif bir iletişim cezası olmamalı!"
+		"it"		"Il leader non deve avere punizioni di comunicazione attive!"
+		"ua"		"Лідер не повинен мати активного покарання за спілкування!"
+		"zho"		"隊長不能有生效中的禁言處罰！"
+		"cze"		"Vedoucí nesmí mít aktivní trest na komunikaci!"
 	}
 
 	"Leader was resigned by Admin"
@@ -156,6 +234,12 @@
 		"de"		"{1} wurde von einem Admin abgesetzt und kann kein Leader sein."
 		"pt"		"{1} foi removido por um admin e não pode ser líder."
 		"chi"		"{1} 已被管理员撤销指挥，无法成为指挥。"
+		"pl"		"{1} został zdjęty przez admina i nie może być liderem."
+		"tr"		"{1} yönetici tarafından görevden alındı ve lider olamaz."
+		"it"		"{1} è stato rimosso da un admin e non può essere leader."
+		"ua"		"{1} знятий адміністратором і не може бути лідером."
+		"zho"		"{1} 已被管理員撤職，無法擔任隊長。"
+		"cze"		"{1} byl odvolán adminem a nemůže být vedoucí."
 	}
 	
 	"Leader cache refreshed"
@@ -167,6 +251,12 @@
 		"de"		"Der Leader-Cache wurde aktualisiert."
 		"pt"		"O cache de líderes foi atualizado."
 		"chi"		"指挥缓存已刷新。"
+		"pl"		"Pamięć podręczna liderów została odświeżona."
+		"tr"		"Lider önbelleği yenilendi."
+		"it"		"La cache dei leader è stata aggiornata."
+		"ua"		"Кеш лідерів оновлено."
+		"zho"		"隊長快取已重新整理。"
+		"cze"		"Mezipaměť vedoucích byla obnovena."
 	}
 
 	"Vote for client"
@@ -179,6 +269,12 @@
 		"de"		"{1} hat dafür gestimmt, dass {2} Leader wird. ({3} Stimmen, {4} benötigt)"
 		"pt"		"{1} votou para {2} ser o líder. ({3} votos, {4} necessários)"
 		"chi"		"{1} 投票让 {2} 成为指挥。({3} 票，需要 {4} 票)"
+		"pl"		"{1} zagłosował na {2} jako lidera. ({3} głosów, wymagane {4})"
+		"tr"		"{1}, {2} oyuncusunun lider olması için oy verdi. ({3} oy, {4} gerekli)"
+		"it"		"{1} ha votato {2} come leader. ({3} voti, {4} richiesti)"
+		"ua"		"{1} проголосував за {2} як лідера. ({3} голосів, потрібно {4})"
+		"zho"		"{1} 投票支持 {2} 擔任隊長。（{3} 票，需要 {4} 票）"
+		"cze"		"{1} hlasoval pro {2} jako vedoucího. ({3} hlasů, potřeba {4})"
 	}
 	
 	"VoteLeader Cooldown"
@@ -191,6 +287,12 @@
 		"de"		"Du hast gerade Cooldown. Du kannst in {1}s erneut abstimmen."
 		"pt"		"Você está em cooldown. Poderá votar novamente em {1}s."
 		"chi"		"你正处于冷却中，{1} 秒后才能再次投票。"
+		"pl"		"Masz cooldown. Możesz zagłosować ponownie za {1}s."
+		"tr"		"Şu an bekleme süresindesin. {1} sn sonra tekrar oy verebilirsin."
+		"it"		"Sei in cooldown. Potrai votare di nuovo tra {1}s."
+		"ua"		"Ви на перезарядці. Ви зможете проголосувати знову через {1} с."
+		"zho"		"你目前在冷卻中，{1} 秒後可再次投票。"
+		"cze"		"Máš cooldown. Znovu můžeš hlasovat za {1} s."
 	}
 
 	"Invalid client"
@@ -202,6 +304,12 @@
 		"de"		"Ungültiger Spieler."
 		"pt"		"Jogador inválido."
 		"chi"		"无效的玩家。"
+		"pl"		"Nieprawidłowy gracz."
+		"tr"		"Geçersiz oyuncu."
+		"it"		"Giocatore non valido."
+		"ua"		"Недійсний гравець."
+		"zho"		"無效的玩家。"
+		"cze"		"Neplatný hráč."
 	}
 
 	"Client is not leader"
@@ -214,6 +322,12 @@
 		"de"		"{1} ist kein Leader!"
 		"pt"		"{1} não é o líder!"
 		"chi"		"{1} 不是指挥！"
+		"pl"		"{1} nie jest liderem!"
+		"tr"		"{1} lider değil!"
+		"it"		"{1} non è il leader!"
+		"ua"		"{1} не є лідером!"
+		"zho"		"{1} 不是隊長！"
+		"cze"		"{1} není vedoucí!"
 	}
 	
 	"Current Leaders"
@@ -225,6 +339,12 @@
 		"de"		"Aktuelle Leader:"
 		"pt"		"Líderes atuais:"
 		"chi"		"当前指挥："
+		"pl"		"Obecni liderzy:"
+		"tr"		"Mevcut Liderler:"
+		"it"		"Leader attuali:"
+		"ua"		"Поточні лідери:"
+		"zho"		"目前的隊長："
+		"cze"		"Současní vedoucí:"
 	}
 	
 	"Possible Leaders"
@@ -237,6 +357,12 @@
 		"de"		"Mögliche Leader online: {olive}{1}"
 		"pt"		"Possíveis líderes online: {olive}{1}"
 		"chi"		"在线的可选指挥：{olive}{1}"
+		"pl"		"Dostępni potencjalni liderzy: {olive}{1}"
+		"tr"		"Çevrimiçi olası liderler: {olive}{1}"
+		"it"		"Possibili leader online: {olive}{1}"
+		"ua"		"Можливі лідери онлайн: {olive}{1}"
+		"zho"		"線上可能的隊長：{olive}{1}"
+		"cze"		"Možní vedoucí online: {olive}{1}"
 	}
 	
 	"Possible Leaders None"
@@ -248,6 +374,12 @@
 		"de"		"Mögliche Leader online: {olive}Keine."
 		"pt"		"Possíveis líderes online: {olive}Nenhum."
 		"chi"		"在线的可选指挥：{olive}无。"
+		"pl"		"Dostępni potencjalni liderzy: {olive}Brak."
+		"tr"		"Çevrimiçi olası liderler: {olive}Yok."
+		"it"		"Possibili leader online: {olive}Nessuno."
+		"ua"		"Можливі лідери онлайн: {olive}Немає."
+		"zho"		"線上可能的隊長：{olive}無。"
+		"cze"		"Možní vedoucí online: {olive}Žádní."
 	}
 
 	"Become New Leader"
@@ -260,6 +392,12 @@
 		"de"		"{lightblue}{1}{default} ist jetzt Leader {darkred}[{orange}{2}{darkred}]"
 		"pt"		"{lightblue}{1}{default} se tornou líder {darkred}[{orange}{2}{darkred}]"
 		"chi"		"{lightblue}{1}{default} 成为了指挥 {darkred}[{orange}{2}{darkred}]"
+		"pl"		"{lightblue}{1}{default} został liderem {darkred}[{orange}{2}{darkred}]"
+		"tr"		"{lightblue}{1}{default} lider oldu {darkred}[{orange}{2}{darkred}]"
+		"it"		"{lightblue}{1}{default} è diventato leader {darkred}[{orange}{2}{darkred}]"
+		"ua"		"{lightblue}{1}{default} став лідером {darkred}[{orange}{2}{darkred}]"
+		"zho"		"{lightblue}{1}{default} 成為了隊長 {darkred}[{orange}{2}{darkred}]"
+		"cze"		"{lightblue}{1}{default} se stal vedoucím {darkred}[{orange}{2}{darkred}]"
 	}
 	
 	"Cooldown Ping"
@@ -272,6 +410,12 @@
 		"de"		"Ping nicht möglich. Der Ping hat noch Cooldown. {red}({1} Sekunden)"
 		"pt"		"Não é possível pingar. O ping está em cooldown. {red}({1} segundos)"
 		"chi"		"无法标点，标点正在冷却中。{red}({1} 秒)"
+		"pl"		"Nie można pingować. Ping ma cooldown. {red}({1} s)"
+		"tr"		"Ping atılamıyor. Ping bekleme süresinde. {red}({1} sn)"
+		"it"		"Impossibile pingare. Il ping è in cooldown. {red}({1} secondi)"
+		"ua"		"Не можна пінгувати. Пінг на перезарядці. {red}({1} с)"
+		"zho"		"無法標記，標記冷卻中。{red}（{1} 秒）"
+		"cze"		"Nelze pingnout. Ping má cooldown. {red}({1} s)"
 	}
 
 	"Edicts Limit"
@@ -283,6 +427,12 @@
 		"de"		"Aktion abgebrochen. Der Server hat das Edict-Limit erreicht. Bitte versuche es später erneut."
 		"pt"		"Ação cancelada. O servidor atingiu o limite de edicts. Tente novamente mais tarde."
 		"chi"		"操作已取消。服务器已达到 edict 上限，请稍后再试。"
+		"pl"		"Akcja anulowana. Serwer osiągnął limit edyktów. Spróbuj ponownie później."
+		"tr"		"İşlem iptal edildi. Sunucu edict sınırına ulaştı. Lütfen daha sonra tekrar dene."
+		"it"		"Azione annullata. Il server ha raggiunto il limite di edict. Riprova più tardi."
+		"ua"		"Дію скасовано. Сервер досяг ліміту едиктів. Спробуйте пізніше."
+		"zho"		"操作已取消。伺服器已達實體上限，請稍後再試。"
+		"cze"		"Akce zrušena. Server dosáhl limitu edictů. Zkus to prosím později."
 	}
 
 	// Remove Reason
@@ -296,6 +446,12 @@
 		"de"		"{orange}Leader {darkred}[{orange}{1}{darkred}] {olive}{2}{default} hat den Server verlassen!"
 		"pt"		"{orange}O líder {darkred}[{orange}{1}{darkred}] {olive}{2}{default} se desconectou do servidor!"
 		"chi"		"{orange}指挥 {darkred}[{orange}{1}{darkred}] {olive}{2}{default} 已断开与服务器的连接！"
+		"pl"		"{orange}Lider {darkred}[{orange}{1}{darkred}] {olive}{2}{default} rozłączył się z serwerem!"
+		"tr"		"{orange}Lider {darkred}[{orange}{1}{darkred}] {olive}{2}{default} sunucudan ayrıldı!"
+		"it"		"{orange}Leader {darkred}[{orange}{1}{darkred}] {olive}{2}{default} si è disconnesso dal server!"
+		"ua"		"{orange}Лідер {darkred}[{orange}{1}{darkred}] {olive}{2}{default} відключився від сервера!"
+		"zho"		"{orange}隊長 {darkred}[{orange}{1}{darkred}] {olive}{2}{default} 已離開伺服器！"
+		"cze"		"{orange}Vedoucí {darkred}[{orange}{1}{darkred}] {olive}{2}{default} se odpojil ze serveru!"
 	}
 
 	"Remove Admin Force"
@@ -308,6 +464,12 @@
 		"de"		"{orange}Leader {darkred}[{orange}{1}{darkred}] {olive}{2}{default} wurde von einem Admin abgesetzt!"
 		"pt"		"{orange}O líder {darkred}[{orange}{1}{darkred}] {olive}{2}{default} foi removido por um admin!"
 		"chi"		"{orange}指挥 {darkred}[{orange}{1}{darkred}] {olive}{2}{default} 已被管理员撤销！"
+		"pl"		"{orange}Lider {darkred}[{orange}{1}{darkred}] {olive}{2}{default} został zdjęty przez admina!"
+		"tr"		"{orange}Lider {darkred}[{orange}{1}{darkred}] {olive}{2}{default} yönetici tarafından görevden alındı!"
+		"it"		"{orange}Leader {darkred}[{orange}{1}{darkred}] {olive}{2}{default} è stato rimosso da un admin!"
+		"ua"		"{orange}Лідер {darkred}[{orange}{1}{darkred}] {olive}{2}{default} знятий адміністратором!"
+		"zho"		"{orange}隊長 {darkred}[{orange}{1}{darkred}] {olive}{2}{default} 已被管理員撤職！"
+		"cze"		"{orange}Vedoucí {darkred}[{orange}{1}{darkred}] {olive}{2}{default} byl odvolán adminem!"
 	}
 
 	"Remove Self Resign"
@@ -320,6 +482,12 @@
 		"de"		"{orange}Leader {darkred}[{orange}{1}{darkred}] {olive}{2}{default} ist freiwillig zurückgetreten!"
 		"pt"		"{orange}O líder {darkred}[{orange}{1}{darkred}] {olive}{2}{default} renunciou por conta própria!"
 		"chi"		"{orange}指挥 {darkred}[{orange}{1}{darkred}] {olive}{2}{default} 主动辞去了指挥！"
+		"pl"		"{orange}Lider {darkred}[{orange}{1}{darkred}] {olive}{2}{default} zrezygnował sam!"
+		"tr"		"{orange}Lider {darkred}[{orange}{1}{darkred}] {olive}{2}{default} kendi isteğiyle istifa etti!"
+		"it"		"{orange}Leader {darkred}[{orange}{1}{darkred}] {olive}{2}{default} si è dimesso da solo!"
+		"ua"		"{orange}Лідер {darkred}[{orange}{1}{darkred}] {olive}{2}{default} сам склав повноваження!"
+		"zho"		"{orange}隊長 {darkred}[{orange}{1}{darkred}] {olive}{2}{default} 已自行辭職！"
+		"cze"		"{orange}Vedoucí {darkred}[{orange}{1}{darkred}] {olive}{2}{default} sám rezignoval!"
 	}
 
 	"Remove Spectator"
@@ -332,6 +500,12 @@
 		"de"		"{orange}Leader {darkred}[{orange}{1}{darkred}] {olive}{2}{default} wurde abgesetzt, weil er zu den Zuschauern gewechselt ist!"
 		"pt"		"{orange}O líder {darkred}[{orange}{1}{darkred}] {olive}{2}{default} foi removido por mudar para espectador!"
 		"chi"		"{orange}指挥 {darkred}[{orange}{1}{darkred}] {olive}{2}{default} 因切换到观察者而被撤销！"
+		"pl"		"{orange}Lider {darkred}[{orange}{1}{darkred}] {olive}{2}{default} został zdjęty za przejście do obserwatorów!"
+		"tr"		"{orange}Lider {darkred}[{orange}{1}{darkred}] {olive}{2}{default} izleyiciye geçtiği için görevden alındı!"
+		"it"		"{orange}Leader {darkred}[{orange}{1}{darkred}] {olive}{2}{default} è stato rimosso per essere passato agli spettatori!"
+		"ua"		"{orange}Лідер {darkred}[{orange}{1}{darkred}] {olive}{2}{default} знятий через перехід до спостерігачів!"
+		"zho"		"{orange}隊長 {darkred}[{orange}{1}{darkred}] {olive}{2}{default} 因轉為旁觀者而被撤職！"
+		"cze"		"{orange}Vedoucí {darkred}[{orange}{1}{darkred}] {olive}{2}{default} byl odvolán za přechod mezi diváky!"
 	}
 
 	"Remove Died"
@@ -344,6 +518,12 @@
 		"de"		"{orange}Leader {darkred}[{orange}{1}{darkred}] {olive}{2}{default} ist gestorben und wurde abgesetzt!"
 		"pt"		"{orange}O líder {darkred}[{orange}{1}{darkred}] {olive}{2}{default} morreu e foi removido!"
 		"chi"		"{orange}指挥 {darkred}[{orange}{1}{darkred}] {olive}{2}{default} 已阵亡，被撤销指挥！"
+		"pl"		"{orange}Lider {darkred}[{orange}{1}{darkred}] {olive}{2}{default} zginął i został zdjęty!"
+		"tr"		"{orange}Lider {darkred}[{orange}{1}{darkred}] {olive}{2}{default} öldü ve görevden alındı!"
+		"it"		"{orange}Leader {darkred}[{orange}{1}{darkred}] {olive}{2}{default} è morto ed è stato rimosso!"
+		"ua"		"{orange}Лідер {darkred}[{orange}{1}{darkred}] {olive}{2}{default} загинув і був знятий!"
+		"zho"		"{orange}隊長 {darkred}[{orange}{1}{darkred}] {olive}{2}{default} 已死亡並被撤職！"
+		"cze"		"{orange}Vedoucí {darkred}[{orange}{1}{darkred}] {olive}{2}{default} zemřel a byl odvolán!"
 	}
 
 	"Remove Infected"
@@ -356,6 +536,12 @@
 		"de"		"{orange}Leader {darkred}[{orange}{1}{darkred}] {olive}{2}{default} wurde infiziert und abgesetzt!"
 		"pt"		"{orange}O líder {darkred}[{orange}{1}{darkred}] {olive}{2}{default} foi infectado e removido!"
 		"chi"		"{orange}指挥 {darkred}[{orange}{1}{darkred}] {olive}{2}{default} 已被感染，被撤销指挥！"
+		"pl"		"{orange}Lider {darkred}[{orange}{1}{darkred}] {olive}{2}{default} został zarażony i zdjęty!"
+		"tr"		"{orange}Lider {darkred}[{orange}{1}{darkred}] {olive}{2}{default} enfekte oldu ve görevden alındı!"
+		"it"		"{orange}Leader {darkred}[{orange}{1}{darkred}] {olive}{2}{default} è stato infettato ed è stato rimosso!"
+		"ua"		"{orange}Лідер {darkred}[{orange}{1}{darkred}] {olive}{2}{default} заражений і був знятий!"
+		"zho"		"{orange}隊長 {darkred}[{orange}{1}{darkred}] {olive}{2}{default} 已被感染並被撤職！"
+		"cze"		"{orange}Vedoucí {darkred}[{orange}{1}{darkred}] {olive}{2}{default} byl nakažen a odvolán!"
 	}
 
 	"Marker Max Limit"
@@ -368,6 +554,12 @@
 		"de"		"Du hast das Limit von {1} aktiven Markern erreicht."
 		"pt"		"Você atingiu o limite de {1} marcadores ativos."
 		"chi"		"你已达到 {1} 个有效标记的上限。"
+		"pl"		"Osiągnąłeś limit {1} aktywnych znaczników."
+		"tr"		"{1} aktif işaretçi sınırına ulaştın."
+		"it"		"Hai raggiunto il limite di {1} marcatori attivi."
+		"ua"		"Ви досягли ліміту в {1} активних маркерів."
+		"zho"		"你已達到 {1} 個有效標記的上限。"
+		"cze"		"Dosáhl jsi limitu {1} aktivních značek."
 	}
 
 
@@ -381,6 +573,12 @@
 		"de"		"[ZLeader]"
 		"pt"		"[ZLeader]"
 		"chi"		"[ZLeader]"
+		"pl"		"[ZLeader]"
+		"tr"		"[ZLeader]"
+		"it"		"[ZLeader]"
+		"ua"		"[ZLeader]"
+		"zho"		"[ZLeader]"
+		"cze"		"[ZLeader]"
 	}
 
 	"Menu Leader title"
@@ -392,6 +590,12 @@
 		"de"		"Leader-Menü"
 		"pt"		"Menu de líder"
 		"chi"		"指挥菜单"
+		"pl"		"Menu lidera"
+		"tr"		"Lider Menüsü"
+		"it"		"Menu leader"
+		"ua"		"Меню лідера"
+		"zho"		"隊長選單"
+		"cze"		"Menu vedoucího"
 	}
 
 	"Active Marker"
@@ -403,6 +607,12 @@
 		"de"		"Aktiver Marker:"
 		"pt"		"Marcador ativo:"
 		"chi"		"当前标记："
+		"pl"		"Aktywny znacznik:"
+		"tr"		"Aktif İşaretçi:"
+		"it"		"Marcatore attivo:"
+		"ua"		"Активний маркер:"
+		"zho"		"目前標記："
+		"cze"		"Aktivní značka:"
 	}
 
 	"Menu Leader list title"
@@ -414,6 +624,12 @@
 		"de"		"Leader-Liste"
 		"pt"		"Lista de líderes"
 		"chi"		"指挥列表"
+		"pl"		"Menu listy liderów"
+		"tr"		"Lider listesi menüsü"
+		"it"		"Menu lista leader"
+		"ua"		"Меню списку лідерів"
+		"zho"		"隊長列表選單"
+		"cze"		"Menu seznamu vedoucích"
 	}
 
 	"Menu Remove Leader title"
@@ -425,6 +641,12 @@
 		"de"		"Wähle einen Leader zum Entfernen"
 		"pt"		"Selecione um líder para removê-lo"
 		"chi"		"选择要撤销的指挥"
+		"pl"		"Wybierz lidera do usunięcia"
+		"tr"		"Kaldırmak için lideri seç"
+		"it"		"Seleziona il leader da rimuovere"
+		"ua"		"Оберіть лідера для зняття"
+		"zho"		"選擇要撤職的隊長"
+		"cze"		"Vyber vedoucího k odebrání"
 	}
 
 	"None"
@@ -436,6 +658,12 @@
 		"de"		"Keiner"
 		"pt"		"Nenhum"
 		"chi"		"无"
+		"pl"		"Brak"
+		"tr"		"Yok"
+		"it"		"Nessuno"
+		"ua"		"Немає"
+		"zho"		"無"
+		"cze"		"Žádný"
 	}
 
 	"Defend Here"
@@ -447,6 +675,12 @@
 		"de"		"Hier verteidigen"
 		"pt"		"Defendam aqui"
 		"chi"		"在此防守"
+		"pl"		"Bronić tutaj"
+		"tr"		"Burayı Savun"
+		"it"		"Difendi qui"
+		"ua"		"Захищати тут"
+		"zho"		"在此防守"
+		"cze"		"Braňte zde"
 	}
 
 	"Follow Me"
@@ -458,6 +692,12 @@
 		"de"		"Folgt mir"
 		"pt"		"Sigam-me"
 		"chi"		"跟我来"
+		"pl"		"Za mną"
+		"tr"		"Beni Takip Et"
+		"it"		"Seguitemi"
+		"ua"		"За мною"
+		"zho"		"跟我來"
+		"cze"		"Následujte mě"
 	}
 
 	"Toggle Beacon"
@@ -469,6 +709,12 @@
 		"de"		"Beacon an/aus"
 		"pt"		"Ativar/desativar sinalizador"
 		"chi"		"开关信标"
+		"pl"		"Przełącz latarnię"
+		"tr"		"Işığı Aç/Kapat"
+		"it"		"Attiva/disattiva beacon"
+		"ua"		"Перемкнути маяк"
+		"zho"		"切換信標"
+		"cze"		"Přepnout maják"
 	}
 	
 	"Toggle Trail"
@@ -480,6 +726,12 @@
 		"de"		"Trail an/aus"
 		"pt"		"Ativar/desativar rastro"
 		"chi"		"开关拖尾"
+		"pl"		"Przełącz ślad"
+		"tr"		"İzi Aç/Kapat"
+		"it"		"Attiva/disattiva scia"
+		"ua"		"Перемкнути слід"
+		"zho"		"切換軌跡"
+		"cze"		"Přepnout stopu"
 	}
 
 	"Toggle Tracers"
@@ -491,6 +743,12 @@
 		"de"		"Tracer an/aus"
 		"pt"		"Ativar/desativar traçantes"
 		"chi"		"开关弹道轨迹"
+		"pl"		"Przełącz smugi"
+		"tr"		"İz Mermilerini Aç/Kapat"
+		"it"		"Attiva/disattiva traccianti"
+		"ua"		"Перемкнути трасери"
+		"zho"		"切換彈道"
+		"cze"		"Přepnout stopy střel"
 	}
 
 	"Place Marker"
@@ -502,6 +760,12 @@
 		"de"		"Marker setzen"
 		"pt"		"Colocar marcador"
 		"chi"		"放置标记"
+		"pl"		"Postaw znacznik"
+		"tr"		"İşaretçi Koy"
+		"it"		"Piazza marcatore"
+		"ua"		"Поставити маркер"
+		"zho"		"放置標記"
+		"cze"		"Umístit značku"
 	}
 
 	"Remove Marker"
@@ -513,6 +777,12 @@
 		"de"		"Marker entfernen"
 		"pt"		"Remover marcadores"
 		"chi"		"移除标记"
+		"pl"		"Usuń znaczniki"
+		"tr"		"İşaretçileri Kaldır"
+		"it"		"Rimuovi marcatori"
+		"ua"		"Прибрати маркери"
+		"zho"		"移除標記"
+		"cze"		"Odstranit značky"
 	}
 
 	"Resign from Leader"
@@ -524,6 +794,12 @@
 		"de"		"Als Leader zurücktreten"
 		"pt"		"Deixar de ser líder"
 		"chi"		"辞去指挥"
+		"pl"		"Zrezygnuj z lidera"
+		"tr"		"Liderlikten İstifa Et"
+		"it"		"Dimettiti da leader"
+		"ua"		"Скласти повноваження лідера"
+		"zho"		"辭去隊長"
+		"cze"		"Rezignovat na vedoucího"
 	}
 
 	// Marker Menu
@@ -536,6 +812,12 @@
 		"de"		"Marker-Menü"
 		"pt"		"Menu de marcadores"
 		"chi"		"标记菜单"
+		"pl"		"Menu znaczników"
+		"tr"		"İşaretçi Menüsü"
+		"it"		"Menu marcatori"
+		"ua"		"Меню маркерів"
+		"zho"		"標記選單"
+		"cze"		"Menu značek"
 	}
 
 	"Arrow Marker"
@@ -547,6 +829,12 @@
 		"de"		"Pfeil-Marker"
 		"pt"		"Marcador de seta"
 		"chi"		"箭头标记"
+		"pl"		"Znacznik strzałki"
+		"tr"		"Ok İşaretçisi"
+		"it"		"Marcatore a freccia"
+		"ua"		"Маркер-стрілка"
+		"zho"		"箭頭標記"
+		"cze"		"Značka šipky"
 	}
 	
 	"ZM Teleport"
@@ -558,6 +846,12 @@
 		"de"		"Zombie-Teleport"
 		"pt"		"Teleporte de zumbi"
 		"chi"		"僵尸传送点"
+		"pl"		"Teleport ZM"
+		"tr"		"ZM Işınlanma"
+		"it"		"Teletrasporto ZM"
+		"ua"		"Телепорт ZM"
+		"zho"		"ZM 傳送"
+		"cze"		"Teleport ZM"
 	}
 
 	"No Doorhug"
@@ -569,6 +863,12 @@
 		"de"		"Kein Doorhug"
 		"pt"		"Não fique colado na porta"
 		"chi"		"禁止贴门"
+		"pl"		"Zakaz blokowania drzwi"
+		"tr"		"Kapı Sıkıştırma Yasak"
+		"it"		"Vietato bloccare le porte"
+		"ua"		"Не стояти біля дверей"
+		"zho"		"禁止卡門"
+		"cze"		"Zákaz blokování dveří"
 	}
 	
 	"Ping Marker"
@@ -580,6 +880,12 @@
 		"de"		"Einen Ort pingen"
 		"pt"		"Marcar um local"
 		"chi"		"标点一个位置"
+		"pl"		"Pingnij lokalizację"
+		"tr"		"Konumu İşaretle"
+		"it"		"Segnala una posizione"
+		"ua"		"Позначити місце"
+		"zho"		"標記位置"
+		"cze"		"Pingnout místo"
 	}
 
 	// Preference
@@ -592,6 +898,12 @@
 		"de"		"Spielereinstellungen"
 		"pt"		"Configurações do jogador"
 		"chi"		"玩家设置"
+		"pl"		"Ustawienia gracza"
+		"tr"		"Oyuncu Ayarları"
+		"it"		"Impostazioni giocatore"
+		"ua"		"Налаштування гравця"
+		"zho"		"玩家設定"
+		"cze"		"Nastavení hráče"
 	}
 
 	"Shortcut"
@@ -603,6 +915,12 @@
 		"de"		"Schnelltasten"
 		"pt"		"Teclas de atalho"
 		"chi"		"快捷键"
+		"pl"		"Skróty klawiszowe"
+		"tr"		"Kısayol Tuşları"
+		"it"		"Tasti rapidi"
+		"ua"		"Гарячі клавіші"
+		"zho"		"快捷鍵"
+		"cze"		"Klávesové zkratky"
 	}
 
 	"Marker Pos"
@@ -614,6 +932,12 @@
 		"de"		"Marker-Position"
 		"pt"		"Posição do marcador"
 		"chi"		"标记放置位置"
+		"pl"		"Pozycja znacznika"
+		"tr"		"İşaretçi Konumu"
+		"it"		"Posizione marcatore"
+		"ua"		"Позиція маркера"
+		"zho"		"標記位置"
+		"cze"		"Pozice značky"
 	}
 
 	"Ping Sound"
@@ -625,6 +949,12 @@
 		"de"		"Ping-Ton"
 		"pt"		"Som do ping"
 		"chi"		"标点音效"
+		"pl"		"Dźwięk pingu"
+		"tr"		"Ping Sesi"
+		"it"		"Suono del ping"
+		"ua"		"Звук пінгу"
+		"zho"		"標記音效"
+		"cze"		"Zvuk pingu"
 	}
 
 	"Enabled"
@@ -636,6 +966,12 @@
 		"de"		"Aktiviert"
 		"pt"		"Ativado"
 		"chi"		"已启用"
+		"pl"		"Włączone"
+		"tr"		"Etkin"
+		"it"		"Attivato"
+		"ua"		"Увімкнено"
+		"zho"		"已啟用"
+		"cze"		"Zapnuto"
 	}
 
 	"Disabled"
@@ -647,6 +983,12 @@
 		"de"		"Deaktiviert"
 		"pt"		"Desativado"
 		"chi"		"已禁用"
+		"pl"		"Wyłączone"
+		"tr"		"Devre Dışı"
+		"it"		"Disattivato"
+		"ua"		"Вимкнено"
+		"zho"		"已停用"
+		"cze"		"Vypnuto"
 	}
 
 	"Enabled Chat"
@@ -658,6 +1000,12 @@
 		"de"		"{lime}aktiviert"
 		"pt"		"{lime}ativado"
 		"chi"		"{lime}已启用"
+		"pl"		"{lime}Włączone"
+		"tr"		"{lime}Etkin"
+		"it"		"{lime}Attivato"
+		"ua"		"{lime}Увімкнено"
+		"zho"		"{lime}已啟用"
+		"cze"		"{lime}Zapnuto"
 	}
 
 	"Disabled Chat"
@@ -669,6 +1017,12 @@
 		"de"		"{red}deaktiviert"
 		"pt"		"{red}desativado"
 		"chi"		"{red}已禁用"
+		"pl"		"{red}Wyłączone"
+		"tr"		"{red}Devre Dışı"
+		"it"		"{red}Disattivato"
+		"ua"		"{red}Вимкнено"
+		"zho"		"{red}已停用"
+		"cze"		"{red}Vypnuto"
 	}
 
 	"Client Position"
@@ -680,6 +1034,12 @@
 		"de"		"Spielerposition"
 		"pt"		"Posição do jogador"
 		"chi"		"玩家位置"
+		"pl"		"Pozycja gracza"
+		"tr"		"Oyuncunun Konumu"
+		"it"		"Posizione del giocatore"
+		"ua"		"Позиція гравця"
+		"zho"		"玩家位置"
+		"cze"		"Pozice hráče"
 	}
 
 	"Client Crosshair"
@@ -691,6 +1051,12 @@
 		"de"		"Fadenkreuz des Spielers"
 		"pt"		"Mira do jogador"
 		"chi"		"玩家准星"
+		"pl"		"Celownik gracza"
+		"tr"		"Oyuncunun Nişangahı"
+		"it"		"Mirino del giocatore"
+		"ua"		"Приціл гравця"
+		"zho"		"玩家準星"
+		"cze"		"Zaměřovač hráče"
 	}
 
 	"You set shortcut"
@@ -703,6 +1069,12 @@
 		"de"		"Du hast die Leader-Schnelltaste {1}{default}."
 		"pt"		"Atalho do menu de líder {1}{default}."
 		"chi"		"指挥菜单快捷键：{1}{default}。"
+		"pl"		"Leaderskie skróty klawiszowe: {1}{default}."
+		"tr"		"Lider kısayol tuşları: {1}{default}."
+		"it"		"Tasti rapidi leader: {1}{default}."
+		"ua"		"Гарячі клавіші лідера: {1}{default}."
+		"zho"		"隊長快捷鍵：{1}{default}。"
+		"cze"		"Klávesové zkratky vedoucího: {1}{default}."
 	}
 
 	"You set pingsound"
@@ -715,6 +1087,12 @@
 		"de"		"Leader-Ping-Ton: {1}{default}."
 		"pt"		"Som do ping do líder: {1}{default}."
 		"chi"		"指挥标点音效：{1}{default}。"
+		"pl"		"Dźwięk pingu lidera: {1}{default}."
+		"tr"		"Lider ping sesi: {1}{default}."
+		"it"		"Suono del ping del leader: {1}{default}."
+		"ua"		"Звук пінгу лідера: {1}{default}."
+		"zho"		"隊長標記音效：{1}{default}。"
+		"cze"		"Zvuk pingu vedoucího: {1}{default}."
 	}
 
 	"Marker Pos Crosshair"
@@ -726,6 +1104,12 @@
 		"de"		"Marker werden jetzt an der Position {green}deines Fadenkreuzes{default} gesetzt."
 		"pt"		"Os marcadores serão colocados na posição da {green}sua mira{default}."
 		"chi"		"标记将放置在{green}你的准星{default}所指位置。"
+		"pl"		"Znacznik będzie stawiany w pozycji {green}Twojego celownika{default}."
+		"tr"		"İşaretçi artık {green}nişangahının{default} gösterdiği yere konacak."
+		"it"		"Il marcatore verrà piazzato nella posizione del {green}tuo mirino{default}."
+		"ua"		"Маркер буде ставитися в позиції {green}вашого прицілу{default}."
+		"zho"		"標記將放置在{green}你的準星{default}位置。"
+		"cze"		"Značka bude umístěna na pozici {green}tvého zaměřovače{default}."
 	}
 
 	"Marker Pos Player Position"
@@ -737,6 +1121,12 @@
 		"de"		"Marker werden jetzt an der Position {green}des Spielers{default} gesetzt."
 		"pt"		"Os marcadores serão colocados na posição {green}do jogador{default}."
 		"chi"		"标记将放置在{green}玩家{default}所在位置。"
+		"pl"		"Znacznik będzie stawiany w pozycji {green}gracza{default}."
+		"tr"		"İşaretçi artık {green}oyuncunun{default} bulunduğu yere konacak."
+		"it"		"Il marcatore verrà piazzato nella posizione del {green}giocatore{default}."
+		"ua"		"Маркер буде ставитися в позиції {green}гравця{default}."
+		"zho"		"標記將放置在{green}玩家{default}位置。"
+		"cze"		"Značka bude umístěna na pozici {green}hráče{default}."
 	}
 
 	// Leader Chat & Radio
@@ -750,6 +1140,12 @@
 		"de"		"Leader {1}"
 		"pt"		"Líder {1}"
 		"chi"		"指挥 {1}"
+		"pl"		"Lider {1}"
+		"tr"		"Lider {1}"
+		"it"		"Leader {1}"
+		"ua"		"Лідер {1}"
+		"zho"		"隊長 {1}"
+		"cze"		"Vedoucí {1}"
 	}
 
 	"Human Chat Prefix"
@@ -761,6 +1157,12 @@
 		"de"		"(Mensch)"
 		"pt"		"(Humano)"
 		"chi"		"（人类）"
+		"pl"		"(Człowiek)"
+		"tr"		"(İnsan)"
+		"it"		"(Umano)"
+		"ua"		"(Людина)"
+		"zho"		"(人類)"
+		"cze"		"(Člověk)"
 	}
 
 	"Radio"
@@ -772,6 +1174,12 @@
 		"de"		"FUNK"
 		"pt"		"RÁDIO"
 		"chi"		"无线电"
+		"pl"		"RADIO"
+		"tr"		"RADYO"
+		"it"		"RADIO"
+		"ua"		"РАДІО"
+		"zho"		"無線電"
+		"cze"		"RÁDIO"
 	}
 
 	"Radio compliment"
@@ -783,6 +1191,12 @@
 		"de"		"Gut gemacht!"
 		"pt"		"Boa!"
 		"chi"		"干得漂亮！"
+		"pl"		"Dobra robota!"
+		"tr"		"Güzel!"
+		"it"		"Bene!"
+		"ua"		"Чудово!"
+		"zho"		"幹得好！"
+		"cze"		"Pěkné!"
 	}
 
 	"Radio coverme"
@@ -794,6 +1208,12 @@
 		"de"		"Gebt mir Deckung!"
 		"pt"		"Me deem cobertura!"
 		"chi"		"掩护我！"
+		"pl"		"Osłaniaj mnie!"
+		"tr"		"Beni koru!"
+		"it"		"Coprimi!"
+		"ua"		"Прикрийте мене!"
+		"zho"		"掩護我！"
+		"cze"		"Kryj mě!"
 	}
 
 	"Radio cheer"
@@ -805,6 +1225,12 @@
 		"de"		"Hurra!"
 		"pt"		"Viva!"
 		"chi"		"欢呼！"
+		"pl"		"Hura!"
+		"tr"		"Yaşasın!"
+		"it"		"Evviva!"
+		"ua"		"Ура!"
+		"zho"		"加油！"
+		"cze"		"Hurá!"
 	}
 
 	"Radio takepoint"
@@ -816,6 +1242,12 @@
 		"de"		"Du übernimmst die Spitze."
 		"pt"		"Você vai na frente."
 		"chi"		"你打头阵。"
+		"pl"		"Ty idziesz pierwszy."
+		"tr"		"Öncüyü sen al."
+		"it"		"Prendi tu la testa."
+		"ua"		"Ви йдете першим."
+		"zho"		"你來帶頭。"
+		"cze"		"Ty půjdeš první."
 	}
 
 	"Radio holdpos"
@@ -827,6 +1259,12 @@
 		"de"		"Haltet diese Position."
 		"pt"		"Segurem esta posição."
 		"chi"		"守住这个位置。"
+		"pl"		"Utrzymać pozycję."
+		"tr"		"Bu pozisyonu koru."
+		"it"		"Mantenete la posizione."
+		"ua"		"Утримуйте позицію."
+		"zho"		"堅守這個位置。"
+		"cze"		"Držte pozici."
 	}
 
 	"Radio regroup"
@@ -838,6 +1276,12 @@
 		"de"		"Team, sammeln."
 		"pt"		"Equipe, reagrupar."
 		"chi"		"全队重新集结。"
+		"pl"		"Przegrupować drużynę."
+		"tr"		"Takım toplansın."
+		"it"		"Riunite la squadra."
+		"ua"		"Групуйтеся."
+		"zho"		"全隊重新集合。"
+		"cze"		"Přeskupit tým."
 	}
 
 	"Radio followme"
@@ -849,6 +1293,12 @@
 		"de"		"Folgt mir."
 		"pt"		"Sigam-me."
 		"chi"		"跟我来。"
+		"pl"		"Za mną."
+		"tr"		"Beni takip edin."
+		"it"		"Seguitemi."
+		"ua"		"За мною."
+		"zho"		"跟我來。"
+		"cze"		"Následujte mě."
 	}
 
 	"Radio takingfire"
@@ -860,6 +1310,12 @@
 		"de"		"Stehe unter Beschuss... brauche Hilfe!"
 		"pt"		"Sob fogo... preciso de ajuda!"
 		"chi"		"遭到攻击……需要支援！"
+		"pl"		"Jesteśmy pod ostrzałem... potrzebna pomoc!"
+		"tr"		"Ateş altındayız... yardım lazım!"
+		"it"		"Siamo sotto tiro... serve aiuto!"
+		"ua"		"Під обстрілом... потрібна допомога!"
+		"zho"		"遭到攻擊……需要支援！"
+		"cze"		"Jsme pod palbou... potřebujeme pomoc!"
 	}
 
 	"Radio thanks"
@@ -871,6 +1327,12 @@
 		"de"		"Danke!"
 		"pt"		"Valeu!"
 		"chi"		"谢谢！"
+		"pl"		"Dzięki!"
+		"tr"		"Teşekkürler!"
+		"it"		"Grazie!"
+		"ua"		"Дякую!"
+		"zho"		"謝謝！"
+		"cze"		"Díky!"
 	}
 
 	"Radio go"
@@ -882,6 +1344,12 @@
 		"de"		"Los, los, los!"
 		"pt"		"Vai, vai, vai!"
 		"chi"		"冲冲冲！"
+		"pl"		"Naprzód, naprzód, naprzód!"
+		"tr"		"Hadi hadi hadi!"
+		"it"		"Via via via!"
+		"ua"		"Уперед, уперед, уперед!"
+		"zho"		"衝啊衝啊衝啊！"
+		"cze"		"Jdeme, jdeme, jdeme!"
 	}
 
 	"Radio fallback"
@@ -893,6 +1361,12 @@
 		"de"		"Team, zurückziehen!"
 		"pt"		"Equipe, recuar!"
 		"chi"		"全队后撤！"
+		"pl"		"Drużyno, wycofać się!"
+		"tr"		"Takım, geri çekilin!"
+		"it"		"Squadra, ritirata!"
+		"ua"		"Команда, відступаємо!"
+		"zho"		"全隊，撤退！"
+		"cze"		"Týme, ústup!"
 	}
 
 	"Radio sticktog"
@@ -904,6 +1378,12 @@
 		"de"		"Team, bleibt zusammen."
 		"pt"		"Equipe, fiquem juntos."
 		"chi"		"全队保持集合。"
+		"pl"		"Trzymajmy się razem, drużyno."
+		"tr"		"Birlikte kalın, takım."
+		"it"		"Restiamo uniti, squadra."
+		"ua"		"Тримаймося разом, команда."
+		"zho"		"全隊保持在一起。"
+		"cze"		"Držme při sobě, týme."
 	}
 
 	"Radio getinpos"
@@ -915,6 +1395,12 @@
 		"de"		"Geht in Position und wartet auf mein Zeichen!"
 		"pt"		"Fiquem em posição e esperem meu sinal!"
 		"chi"		"各就各位，等我命令！"
+		"pl"		"Zająć pozycje i czekać na mój sygnał!"
+		"tr"		"Pozisyon alın ve benim işaretimi bekleyin!"
+		"it"		"Mettetevi in posizione e aspettate il mio via!"
+		"ua"		"Займіть позиції та чекайте мого сигналу!"
+		"zho"		"就位並等待我的信號！"
+		"cze"		"Zaujměte pozice a čekejte na můj signál!"
 	}
 
 	"Radio stormfront"
@@ -926,6 +1412,12 @@
 		"de"		"Stürmt nach vorne!"
 		"pt"		"Avancem com tudo!"
 		"chi"		"冲锋！"
+		"pl"		"Szturm od frontu!"
+		"tr"		"Cepheden saldırın!"
+		"it"		"Assaltate il fronte!"
+		"ua"		"Штурм з фронту!"
+		"zho"		"強攻正面！"
+		"cze"		"Zaútočte zepředu!"
 	}
 
 	"Radio report"
@@ -937,6 +1429,12 @@
 		"de"		"Team, Meldung machen."
 		"pt"		"Equipe, reportem."
 		"chi"		"全队报告情况。"
+		"pl"		"Zgłosić się, drużyno."
+		"tr"		"Rapor verin, takım."
+		"it"		"Rapporto, squadra."
+		"ua"		"Доповідайте, команда."
+		"zho"		"全隊回報。"
+		"cze"		"Hlaste se, týme."
 	}
 
 	"Radio roger"
@@ -948,6 +1446,12 @@
 		"de"		"Verstanden."
 		"pt"		"Entendido."
 		"chi"		"收到。"
+		"pl"		"Przyjąłem."
+		"tr"		"Anlaşıldı."
+		"it"		"Ricevuto."
+		"ua"		"Прийняв."
+		"zho"		"收到。"
+		"cze"		"Rozumím."
 	}
 
 	"Radio enemyspot"
@@ -959,6 +1463,12 @@
 		"de"		"Feind gesichtet."
 		"pt"		"Inimigo avistado."
 		"chi"		"发现敌人。"
+		"pl"		"Wróg namierzony."
+		"tr"		"Düşman görüldü."
+		"it"		"Nemico avvistato."
+		"ua"		"Ворога помічено."
+		"zho"		"發現敵人。"
+		"cze"		"Nepřítel spatřen."
 	}
 
 	"Radio needbackup"
@@ -970,6 +1480,12 @@
 		"de"		"Brauche Verstärkung."
 		"pt"		"Preciso de reforço."
 		"chi"		"需要支援。"
+		"pl"		"Potrzebuję wsparcia."
+		"tr"		"Destek lazım."
+		"it"		"Serve rinforzo."
+		"ua"		"Потрібна підтримка."
+		"zho"		"需要支援。"
+		"cze"		"Potřebuji posily."
 	}
 
 	"Radio sectorclear"
@@ -981,6 +1497,12 @@
 		"de"		"Sektor gesichert."
 		"pt"		"Setor limpo."
 		"chi"		"区域安全。"
+		"pl"		"Sektor czysty."
+		"tr"		"Bölge temiz."
+		"it"		"Settore libero."
+		"ua"		"Сектор чистий."
+		"zho"		"區域已清空。"
+		"cze"		"Sektor čistý."
 	}
 
 	"Radio inposition"
@@ -992,6 +1514,12 @@
 		"de"		"Bin in Position."
 		"pt"		"Estou em posição."
 		"chi"		"我已就位。"
+		"pl"		"Jestem na pozycji."
+		"tr"		"Pozisyondayım."
+		"it"		"Sono in posizione."
+		"ua"		"Я на позиції."
+		"zho"		"我已就位。"
+		"cze"		"Jsem na pozici."
 	}
 
 	"Radio reportingin"
@@ -1003,6 +1531,12 @@
 		"de"		"Melde mich."
 		"pt"		"Reportando."
 		"chi"		"报告。"
+		"pl"		"Melduję się."
+		"tr"		"Rapor veriyorum."
+		"it"		"Rapporto in corso."
+		"ua"		"Доповідаю."
+		"zho"		"回報中。"
+		"cze"		"Hlásím se."
 	}
 
 	"Radio getout"
@@ -1014,6 +1548,12 @@
 		"de"		"Raus da, das fliegt gleich in die Luft!"
 		"pt"		"Saiam daí, vai explodir!"
 		"chi"		"快离开那里，要爆炸了！"
+		"pl"		"Uciekaj stamtąd, zaraz wybuchnie!"
+		"tr"		"Oradan çıkın, patlayacak!"
+		"it"		"Via di lì, sta per esplodere!"
+		"ua"		"Тікайте звідти, зараз вибухне!"
+		"zho"		"快離開那裡，要爆炸了！"
+		"cze"		"Pryč odtamtud, to vybuchne!"
 	}
 
 	"Radio negative"
@@ -1025,6 +1565,12 @@
 		"de"		"Negativ."
 		"pt"		"Negativo."
 		"chi"		"否定。"
+		"pl"		"Negatywnie."
+		"tr"		"Olumsuz."
+		"it"		"Negativo."
+		"ua"		"Заперечно."
+		"zho"		"否定。"
+		"cze"		"Negativní."
 	}
 
 	"Radio enemydown"
@@ -1036,5 +1582,11 @@
 		"de"		"Feind erledigt."
 		"pt"		"Inimigo abatido."
 		"chi"		"敌人已被击倒。"
+		"pl"		"Wróg wyeliminowany."
+		"tr"		"Düşman indi."
+		"it"		"Nemico abbattuto."
+		"ua"		"Ворога ліквідовано."
+		"zho"		"敵人已倒下。"
+		"cze"		"Nepřítel zneškodněn."
 	}
 }
